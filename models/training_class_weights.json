@@ -1,0 +1,6 @@
+{
+  "source_split": "training",
+  "negative_samples": 234965,
+  "positive_samples": 5035,
+  "scale_pos_weight": 46.666335650446875
+}

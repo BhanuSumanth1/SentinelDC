@@ -1,0 +1,17 @@
+{
+  "tests_passed": 70,
+  "pipeline_completed": true,
+  "generator_and_data_hashes_unchanged": true,
+  "protocol_sources_unchanged_after_test": false,
+  "test_rows": 54000,
+  "unique_test_events": 43,
+  "alerts_match_saved_metrics": true,
+  "minimum_alert_spacing_hours": 6.0,
+  "test_inference_policy": "One frozen base-model prediction call; all metrics reuse cached scores.",
+  "training_calibration_selection_and_alert_sources_unchanged_after_test": true,
+  "post_test_source_changes": [
+    "src/scientific_audit.py"
+  ],
+  "post_test_change_reason": "Compatibility only: the historical audit unwraps the calibrated model and reuses cached TEST scores/alerts. No training, calibration, selection, policy or final-evaluation code changed; TEST was not rescored.",
+  "post_test_audit_sha256": "a5e4cbf378df3f9cbd87942dc1ca99859d828a9f0fccec860a0bdb34488abcd4"
+}

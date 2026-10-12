@@ -1,0 +1,78 @@
+SCIENTIFIC LEAKAGE AUDIT
+Scope: current implementation and saved artifacts; diagnostic-only.
+PASS means inspected/tested check passed, not proof of real-world validity.
+
+PASS | Explicit saved feature allowlist
+  cpu_utilization, memory_utilization, disk_utilization, gpu_utilization, temperature_c, disk_read_mb_s, disk_write_mb_s, network_in_mb_s, network_out_mb_s, packet_loss_pct, network_latency_ms, smart_error_count, fan_speed_rpm, power_watts, uptime_days, hour_of_day, day_of_week, cpu_memory_interaction, temperature_deviation, network_total_mb_s, disk_total_mb_s, error_rate_indicator, high_temperature_flag, high_packet_loss_flag
+PASS | No direct ML input: failure_within_24h
+  Excluded from all 24 model inputs.
+PASS | No direct ML input: failure_type
+  Excluded from all 24 model inputs.
+PASS | No direct ML input: failure_event_id
+  Excluded from all 24 model inputs.
+PASS | No direct ML input: actual_failure_timestamp
+  Excluded from all 24 model inputs.
+PASS | logistic_regression: fitted feature schema
+  Persisted pipeline feature_names_in_ equals the audited allowlist.
+PASS | logistic_regression: imputer fitted on train only
+  Persisted imputer statistics match training medians (also reviewed train.main fit path).
+PASS | logistic_regression: scaler training moments
+  Saved scaler mean matches imputed training features only.
+PASS | random_forest: fitted feature schema
+  Persisted pipeline feature_names_in_ equals the audited allowlist.
+PASS | random_forest: imputer fitted on train only
+  Persisted imputer statistics match training medians (also reviewed train.main fit path).
+PASS | hist_gradient_boosting: fitted feature schema
+  Persisted pipeline feature_names_in_ equals the audited allowlist.
+PASS | hist_gradient_boosting: imputer fitted on train only
+  Persisted imputer statistics match training medians (also reviewed train.main fit path).
+PASS | best_failure_model: fitted feature schema
+  Persisted pipeline feature_names_in_ equals the audited allowlist.
+PASS | best_failure_model: imputer fitted on train only
+  Persisted imputer statistics match training medians (also reviewed train.main fit path).
+PASS | No indirect target/metadata dependency in feature engineering
+  All forbidden columns removed before engineer_features; outputs identical. Raw telemetry dependencies reviewed below.
+PASS | Prefix invariance including missing-data handling
+  Removing all observations at/after midpoint leaves earlier engineered features unchanged, including injected missing CPU values.
+PASS | Future-value perturbation invariance
+  Replacing every future telemetry value with zero does not change earlier features.
+PASS | Strict train/validation/test chronology
+  {"horizon_hours": 24, "fractions_before_purge": [0.7, 0.15, 0.15], "purged_rows": 24000, "training": {"start": "2025-01-01T00:00:00+00:00", "end": "2025-01-20T23:00:00+00:00", "rows": 240000, "positive_rate": 0.0180625}, "validation": {"start": "2025-01-22T00:00:00+00:00", "end": "2025-01-25T11:00:00+00:00", "rows": 42000, "positive_rate": 0.022571428571428572}, "test": {"start": "2025-01-26T12:00:00+00:00", "end": "2025-01-30T23:00:00+00:00", "rows": 54000, "positive_rate": 0.024425925925925927}}
+PASS | 24h outcome windows do not cross split boundaries
+  Purges at both boundaries; no future target window enters the next partition.
+PASS | No incident shared across split warning rows
+  Incident counts in train/validation/test: [185, 49, 63]
+PASS | Stored split metadata matches data
+  Reconstructed split equals persisted boundaries, counts, and prevalence.
+PASS | Validation-only model and threshold selection
+  Reviewed evaluate.select_on_validation: receives validation only. Final evaluator loads the frozen model/threshold and does not fit, select, or tune. Existing isolation tests verify this.
+PASS | No random split / internal early stopping split
+  Unique timestamp boundaries; HGB early_stopping=False. Random Forest bootstrap is confined to training rows.
+PASS | Engineered feature causality: hour_of_day
+  current timestamp hour (UTC); no future row, target, event ID, failure type, or failure timestamp.
+PASS | Engineered feature causality: day_of_week
+  current timestamp weekday (UTC); no future row, target, event ID, failure type, or failure timestamp.
+PASS | Engineered feature causality: cpu_memory_interaction
+  current CPU * current memory / 100; no future row, target, event ID, failure type, or failure timestamp.
+PASS | Engineered feature causality: temperature_deviation
+  current temperature - fixed constant 55; no future row, target, event ID, failure type, or failure timestamp.
+PASS | Engineered feature causality: network_total_mb_s
+  current network_in + current network_out; no future row, target, event ID, failure type, or failure timestamp.
+PASS | Engineered feature causality: disk_total_mb_s
+  current disk_read + current disk_write; no future row, target, event ID, failure type, or failure timestamp.
+PASS | Engineered feature causality: error_rate_indicator
+  log1p(current SMART errors) + current packet_loss / 5; no future row, target, event ID, failure type, or failure timestamp.
+PASS | Engineered feature causality: high_temperature_flag
+  current temperature > fixed constant 75; no future row, target, event ID, failure type, or failure timestamp.
+PASS | Engineered feature causality: high_packet_loss_flag
+  current packet_loss > fixed constant 1; no future row, target, event ID, failure type, or failure timestamp.
+
+RAW FEATURE PROVENANCE REVIEW:
+All 15 raw inputs are current simulated telemetry, not copied labels or future observations.
+Generator uses a latent scheduled event to synthesize preceding degradation. This is backward simulation, not runtime target leakage; it creates strong synthetic shortcuts.
+uptime_days resets only at/after an observed event, not before it. Fan speed depends on current simulated temperature.
+Forward filling uses sorted same-server past readings only, with <=2h age; residual imputation and scaling are fit on train only.
+Validation reads future labels to check data consistency and split prevalence for reporting; neither is passed as a feature or used to fit models.
+Final metadata is joined only after model prediction for retrospective incident evaluation.
+LIMITATION: source review plus finite perturbation tests cannot prove absence of every possible distributional shortcut.
+HISTORICAL HOLDOUT WARNING: this dataset was previously used in baseline model selection and inspected in earlier stages; current code isolation does not make it a fresh independent benchmark.

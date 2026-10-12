@@ -1,0 +1,28 @@
+........................................................................ [ 58%]
+...................................................                      [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.11/site-packages/shap/plots/colors/_colors.py:47
+  /Users/harshal/Documents/Codex/2026-09-18/files-pasted-by-the-user-you/outputs/sentineldc/.venv/lib/python3.11/site-packages/shap/plots/colors/_colors.py:47: PendingDeprecationWarning: The set_bad function will be deprecated in a future version. Use cmap.with_extremes(bad=...) or Colormap(bad=...) instead.
+    red_blue.set_bad(gray_rgb.tolist(), 1.0)
+
+.venv/lib/python3.11/site-packages/shap/plots/colors/_colors.py:48
+  /Users/harshal/Documents/Codex/2026-09-18/files-pasted-by-the-user-you/outputs/sentineldc/.venv/lib/python3.11/site-packages/shap/plots/colors/_colors.py:48: PendingDeprecationWarning: The set_over function will be deprecated in a future version. Use cmap.with_extremes(over=...) or Colormap(over=...) instead.
+    red_blue.set_over(gray_rgb.tolist(), 1.0)
+
+.venv/lib/python3.11/site-packages/shap/plots/colors/_colors.py:49
+  /Users/harshal/Documents/Codex/2026-09-18/files-pasted-by-the-user-you/outputs/sentineldc/.venv/lib/python3.11/site-packages/shap/plots/colors/_colors.py:49: PendingDeprecationWarning: The set_under function will be deprecated in a future version. Use cmap.with_extremes(under=...) or Colormap(under=...) instead.
+    red_blue.set_under(gray_rgb.tolist(), 1.0)  # "under" is incorrectly used instead of "bad" in the scatter plot
+
+.venv/lib/python3.11/site-packages/fastapi/testclient.py:1
+  /Users/harshal/Documents/Codex/2026-09-18/files-pasted-by-the-user-you/outputs/sentineldc/.venv/lib/python3.11/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+tests/test_explainability.py::test_explainer_never_fits_and_is_finite_additive
+tests/test_explainability.py::test_metadata_excluded_and_column_order_restored
+tests/test_explainability.py::test_metadata_excluded_and_column_order_restored
+tests/test_explainability.py::test_local_direction_names_and_required_outputs
+  /Users/harshal/Documents/Codex/2026-09-18/files-pasted-by-the-user-you/outputs/sentineldc/.venv/lib/python3.11/site-packages/shap/explainers/_tree.py:583: UserWarning: LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+123 passed, 8 warnings in 45.64s

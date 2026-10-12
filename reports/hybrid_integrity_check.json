@@ -1,0 +1,23 @@
+{
+  "frozen_supervised_artifacts_unchanged": true,
+  "frozen_anomaly_artifacts_unchanged": true,
+  "dataset_hashes_unchanged": true,
+  "outer_split_unchanged": true,
+  "protected_file_count": 167,
+  "normalization_fit_split": "VALIDATION",
+  "policy_selection_split": "VALIDATION",
+  "risk_boundary_selection_split": "prespecified constants anchored to frozen validation thresholds",
+  "test_used_for_tuning": false,
+  "test_used_for_underlying_inference": false,
+  "selected_hybrid_test_applications": 1,
+  "overlap_inspected_only_after_policy_frozen": true,
+  "frozen_hybrid_policy_sha256": "3c2286d112e221515aeba9cb83bce5f5ff9924befe9e4f96dfa9392728e954e4",
+  "source_hashes_unchanged_during_run": true,
+  "tests_passed": 90,
+  "cached_output_rows_verified": 54000,
+  "dashboard_snapshot_servers": 500,
+  "high_critical_reason_records_verified": 16460,
+  "minimum_alert_spacing_hours": 6.0,
+  "unique_failure_event_count_verified": 43,
+  "final_source_hashes_verified": true
+}

@@ -1,0 +1,71 @@
+/Users/harshal/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/8c/_9h1fl_d3ndb39kb4_yyddc00000gn/T/matplotlib-quiqxhq1 because there was an issue with the default path (/Users/harshal/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Matplotlib is building the font cache; this may take a moment.
+[1/6] Checking existing telemetry...
+
+[2/6] Validating data...
+Validation report
+  rows: 360000
+  unique_servers: 500
+  duplicate_rows: 0
+  missing_values: 0
+  expected_null_event_metadata: 705848
+  failure_events: 300
+  positive_rate: 0.019655555555555555
+Validation passed.
+
+[3/6] Checking processed features...
+Reusing existing processed data; generator and feature values unchanged.
+
+[4/6] Training five models on TRAIN only...
+Training: 2025-01-01T00:00:00+00:00 to 2025-01-20T23:00:00+00:00 | 240,000 rows | Positive failures: 2.10%
+Validation: 2025-01-22T00:00:00+00:00 to 2025-01-25T11:00:00+00:00 | 42,000 rows | Positive failures: 1.93%
+Test: 2025-01-26T12:00:00+00:00 to 2025-01-30T23:00:00+00:00 | 54,000 rows | Positive failures: 1.55%
+Purged rows across both boundaries: 24,000
+Training logistic_regression...
+Training random_forest...
+Training hist_gradient_boosting...
+Training xgboost...
+Training lightgbm...
+
+[5/6] Validation model choice, calibration, and alert policy...
+
+VALIDATION model comparison (uncalibrated scores, threshold 0.50)
+                 model   pr_auc   recall  precision       f1  roc_auc
+              lightgbm 0.083188 0.165432   0.090175 0.116725 0.717296
+         random_forest 0.080437 0.090123   0.183879 0.120961 0.733334
+               xgboost 0.077100 0.192593   0.072256 0.105086 0.736857
+   logistic_regression 0.054324 0.453086   0.034296 0.063765 0.669698
+hist_gradient_boosting 0.052519 0.213580   0.053527 0.085601 0.698994
+Selected: lightgbm | Calibrated threshold: 0.037 | Emergency: 0.500000
+Preferred recall >= 0.80 AND precision >= 0.20 met: False
+Preferred operating constraints NOT met; using the prespecified highest-F2 fallback.
+
+[6/6] One frozen model evaluation on TEST...
+
+RAW OBSERVATION METRICS — FINAL TEST (calibrated probability)
+   model      split                     score_type   pr_auc  roc_auc  precision   recall       f1       f2  brier_score  accuracy  threshold  true_positive  false_positive  true_negative  false_negative
+lightgbm final_test calibrated_failure_probability 0.104582 0.742982   0.031497 0.557279 0.059623 0.128445     0.015029  0.727204      0.037            467           14360          38802             371
+
+OPERATIONAL ALERTS — FINAL TEST
+total_operational_alerts: 2667
+true_operational_alerts: 87
+false_operational_alerts: 2580
+operational_alert_precision: 0.03262092238470191
+false_operational_alerts_per_server_day: 1.1466666666666667
+
+FAILURE EVENT ANALYSIS
+Actual failure events: 43
+Detected failure events: 36
+Missed failure events: 7
+Event detection rate: 83.72%
+
+FAILURE WARNING LEAD TIME (detected events)
+Median lead time: 20.00 hours
+Mean lead time: 17.83 hours
+25th percentile: 15.00 hours
+75th percentile: 23.00 hours
+Detected at least 12 hours early: 31 (72.09% of all test events)
+Detected at least 6 hours early: 32 (74.42% of all test events)
+
+SentinelDC pipeline completed successfully.

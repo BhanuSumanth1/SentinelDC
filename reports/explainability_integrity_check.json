@@ -1,0 +1,66 @@
+{
+  "shap_version": "0.48.0",
+  "underlying_model": "LGBMClassifier",
+  "explained_output": "positive-class raw log-odds; calibration is reported separately",
+  "feature_perturbation": "tree_path_dependent; frozen training path counts; no TEST background fitting",
+  "global_observations": 2000,
+  "global_positive_observations": 31,
+  "global_sample_method": "Proportional class-stratified TEST sample without replacement, seed 42; explanation only",
+  "unique_observations_explained": 7571,
+  "local_explanations": 200,
+  "failure_event_explanations": 41,
+  "live_view_rows": 500,
+  "protected_file_count": 214,
+  "frozen_supervised_artifacts_unchanged": true,
+  "frozen_anomaly_artifacts_unchanged": true,
+  "frozen_hybrid_artifacts_unchanged": true,
+  "frozen_root_cause_artifacts_unchanged": true,
+  "dataset_hashes_unchanged": true,
+  "training_or_tuning_performed": false,
+  "outcome_metadata_loaded_after_shap": true,
+  "requirements_change": "User-authorized addition shap>=0.46,<0.49. Legacy manifests are preserved; their requirements.txt hash predates this addition.",
+  "example_server": "server_0038",
+  "example_probability": 0.044193346790241894,
+  "example_hybrid_risk": "HIGH",
+  "top_10_global_features": [
+    "uptime_days",
+    "disk_utilization",
+    "day_of_week",
+    "memory_rolling_mean_6h",
+    "temperature_rolling_mean_6h",
+    "fan_speed_rpm",
+    "latency_rolling_mean_6h",
+    "packet_loss_rolling_mean_6h",
+    "error_rate_indicator",
+    "network_latency_ms"
+  ],
+  "example_top_drivers": [
+    {
+      "feature": "uptime_days",
+      "feature_name": "uptime_days",
+      "display_name": "Server uptime",
+      "value": 308.245,
+      "feature_value": 308.245,
+      "shap_value": 0.8740662407024162,
+      "direction": "INCREASES_RISK"
+    },
+    {
+      "feature": "disk_utilization",
+      "feature_name": "disk_utilization",
+      "display_name": "Disk utilization",
+      "value": 63.671,
+      "feature_value": 63.671,
+      "shap_value": 0.37130388235035716,
+      "direction": "INCREASES_RISK"
+    },
+    {
+      "feature": "memory_rolling_mean_6h",
+      "feature_name": "memory_rolling_mean_6h",
+      "display_name": "Average memory utilization (6h)",
+      "value": 60.800333333333334,
+      "feature_value": 60.800333333333334,
+      "shap_value": 0.16364942039297842,
+      "direction": "INCREASES_RISK"
+    }
+  ]
+}

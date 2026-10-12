@@ -1,0 +1,22 @@
+{
+  "server_id": "server_0075",
+  "timestamp": "2025-01-27 15:00:00+00:00",
+  "calibrated_failure_probability": 0.0354248473333304,
+  "supervised_threshold": 0.037,
+  "anomaly_score": 4.710455051747337,
+  "anomaly_percentile": 0.7327619047619047,
+  "hybrid_score": 0.5422260910553114,
+  "risk_level": "HIGH",
+  "reason_codes": [
+    "SECONDARY_SUPERVISED_EVIDENCE",
+    "PERSISTENT_ABNORMALITY",
+    "OPERATIONAL_ALERT"
+  ],
+  "first_alert_timestamp": "2025-01-27 15:00:00+00:00",
+  "actual_failure_timestamp": "2025-01-28 12:00:00+00:00",
+  "warning_lead_time_hours": 21.0,
+  "failure_type": "power_failure",
+  "detected": true,
+  "selection_rule": "earliest detected event with 48h TEST context, otherwise earliest detected; if none, earliest actual event (miss clearly labeled)",
+  "outcome_fields_are_reporting_metadata_only": true
+}

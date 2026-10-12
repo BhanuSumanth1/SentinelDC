@@ -1,0 +1,29 @@
+{
+  "frozen_before_test_at": "2026-09-22T02:18:49.782919+00:00",
+  "source_sha256": {
+    "src/realism_report.py": "254e5179f8892bd638fd209336a2c1e0a5c3cbd56165eaecd8884c21769f0ddd",
+    "src/event_evaluation.py": "344b4675fc4ce85da1f77f833d1c7f8a882c93a9ba04741b7c5ad5a7f6fee67d",
+    "src/config.py": "35efe0d8ad6a8fdb4059d3321f80c6d8668f27c1ac53e1761a4362ef60147e8a",
+    "src/alert_policy.py": "5f7af389e9c794a7f3998b8721822f6f37ad46ea5f823d6afb1740af8c85e7a1",
+    "src/preprocess.py": "dc0e54f50eecf62c059e77b8d1be306e58ebbf4ac52d2d7cf89b6457021c8dac",
+    "src/predict.py": "1118c9467cae28aa6d623c6c92636787912ac7fe037c0e851ce9f32155b1c7fb",
+    "src/__init__.py": "5aef7d55671158bdc5b05566b7e589504d118aa2e0f611da50d2ca5369992871",
+    "src/data_validation.py": "2e024b389c81df6e630573358c082d580086dd8220702b07bdd4445c7484e9b8",
+    "src/generate_data.py": "fe29c02ee03fb58ac9a67629e3ae1a4b8e9ed89c4904d9e55f7e0a6764b0b658",
+    "src/train.py": "2937cc7efab3d338a62ea58f5dd23b23e6617b1397c3e57cf7da1b7a73be46a2",
+    "src/evaluate.py": "3fafc87cd306b6b6375b45c45e485b0c08f4d6991ac4ac9d5995335aaa2ad912",
+    "src/scientific_audit.py": "b0156da3228dd2f2e5d8e313b85426e88d6e3ead157ebda19e29527d84218b8c",
+    "src/calibration.py": "a4bfe1ddbb7218ebd4d25b5d1333e62088d17214b385df7e875a5085ac331917",
+    "requirements.txt": "3377caab7d9f53d4fcf75e8da4203cc1ff09c8c7f66cb39ede119607ec9dd17a",
+    "run_pipeline.py": "75697c9394798cc940ca2092768ee81aa2750485124af67d9d8c5887ba5c93b4"
+  },
+  "python": "3.11.16 (main, Sep  1 2026, 14:08:22) [Clang 22.1.3 ]",
+  "architecture": "arm64",
+  "packages": {
+    "scikit-learn": "1.7.2",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.7.0"
+  },
+  "test_status": "Previously inspected in historical stages; no candidate test comparisons or test tuning in this stage.",
+  "protocol": "TRAIN only estimators and class weights; validation AP selection; early validation Platt fit, 24h purge, later validation F2/policy selection; 2 hourly observations OR validation emergency; 6h cooldown; one final test inference."
+}

@@ -1,0 +1,30 @@
+{
+  "window_hours": 3,
+  "history_hours": 48,
+  "minimum_history_observations": 12,
+  "weights": {
+    "shared_component_evidence": 0.35,
+    "telemetry_signature_strength": 0.25,
+    "temporal_coherence": 0.2,
+    "anomaly_evidence": 0.1,
+    "hybrid_risk_evidence": 0.1
+  },
+  "minimum_signature_strength": 0.35,
+  "minimum_signature_margin": 0.05,
+  "minimum_candidate_score": 0.55,
+  "high_confidence_threshold": 0.75,
+  "candidate_coverage_minimum": 0.1,
+  "datacenter_coverage_minimum": 0.5,
+  "shared_evidence": "0.6 * positive membership lift above within-datacenter background + 0.4 * affected component coverage; single server uses 1 / incident affected count",
+  "temporal_evidence": "1 - first-alert onset spread / incident window; a single server gets 0.5, not perfect synchronization",
+  "interpretation": "Root-cause confidence score is heuristic evidence, NOT a calibrated causal probability.",
+  "source_sha256": {
+    "src/infrastructure_graph.py": "f493fb5a6ec13fd428b4a7f703d4399026824ece8211a9007dc83ec6456242dc",
+    "src/root_cause.py": "cbb60ae9d208a04a13dff9ff46754201b62497f9b8b524011f78fcddcfefed62",
+    "src/root_cause_evaluation.py": "0d9e1eec14ebe61d5cd396087ecc14bacb20d7791ff227d1dc24954f75b1ec85",
+    "run_root_cause_pipeline.py": "fa2c7fcf24cfaf120a5e4ac6c2e08d503dea5768e6ef0d2527f4f38fab77d085"
+  },
+  "labels_used_only_after_inference": true,
+  "clustering_null_repeats": 100,
+  "random_seed": 42
+}

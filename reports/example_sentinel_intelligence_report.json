@@ -1,0 +1,195 @@
+{
+  "server_id": "server_0038",
+  "timestamp": "2025-01-26 13:00:00+00:00",
+  "selection_basis": "Earliest detected-event first warning with HIGH/CRITICAL hybrid risk; event-ID tie-break. Metadata joined after SHAP.",
+  "supervised": {
+    "server_id": "server_0038",
+    "timestamp": "2025-01-26 13:00:00+00:00",
+    "calibrated_failure_probability": 0.044193346790241894,
+    "supervised_threshold": 0.037,
+    "hybrid_risk_level": "HIGH",
+    "anomaly_score": 1.0353228156207848,
+    "anomaly_percentile": 0.0426666666666666,
+    "base_model_output": -2.2581310074901997,
+    "explained_model_output": -0.9229129662665081,
+    "shap_units": "base_model_raw_log_odds",
+    "top_risk_drivers": [
+      {
+        "feature": "uptime_days",
+        "feature_name": "uptime_days",
+        "display_name": "Server uptime",
+        "value": 308.245,
+        "feature_value": 308.245,
+        "shap_value": 0.8740662407024162,
+        "direction": "INCREASES_RISK"
+      },
+      {
+        "feature": "disk_utilization",
+        "feature_name": "disk_utilization",
+        "display_name": "Disk utilization",
+        "value": 63.671,
+        "feature_value": 63.671,
+        "shap_value": 0.37130388235035716,
+        "direction": "INCREASES_RISK"
+      },
+      {
+        "feature": "memory_rolling_mean_6h",
+        "feature_name": "memory_rolling_mean_6h",
+        "display_name": "Average memory utilization (6h)",
+        "value": 60.800333333333334,
+        "feature_value": 60.800333333333334,
+        "shap_value": 0.16364942039297842,
+        "direction": "INCREASES_RISK"
+      },
+      {
+        "feature": "memory_utilization",
+        "feature_name": "memory_utilization",
+        "display_name": "Memory utilization",
+        "value": 61.772,
+        "feature_value": 61.772,
+        "shap_value": 0.08089380715503564,
+        "direction": "INCREASES_RISK"
+      },
+      {
+        "feature": "cpu_rolling_mean_6h",
+        "feature_name": "cpu_rolling_mean_6h",
+        "display_name": "Average CPU utilization (6h)",
+        "value": 33.8675,
+        "feature_value": 33.8675,
+        "shap_value": 0.06548931342564125,
+        "direction": "INCREASES_RISK"
+      }
+    ],
+    "protective_factors": [
+      {
+        "feature": "gpu_utilization",
+        "feature_name": "gpu_utilization",
+        "display_name": "GPU utilization",
+        "value": 7.993,
+        "feature_value": 7.993,
+        "shap_value": -0.12581978463303803,
+        "direction": "DECREASES_RISK"
+      },
+      {
+        "feature": "error_rate_indicator",
+        "feature_name": "error_rate_indicator",
+        "display_name": "Error rate indicator",
+        "value": 0.0042,
+        "feature_value": 0.0042,
+        "shap_value": -0.07218720499202108,
+        "direction": "DECREASES_RISK"
+      },
+      {
+        "feature": "temperature_rolling_mean_6h",
+        "feature_name": "temperature_rolling_mean_6h",
+        "display_name": "Average temperature (6h)",
+        "value": 54.15883333333333,
+        "feature_value": 54.15883333333333,
+        "shap_value": -0.06707382044043214,
+        "direction": "DECREASES_RISK"
+      },
+      {
+        "feature": "power_watts",
+        "feature_name": "power_watts",
+        "display_name": "Power consumption",
+        "value": 260.57,
+        "feature_value": 260.57,
+        "shap_value": -0.05107636981200304,
+        "direction": "DECREASES_RISK"
+      },
+      {
+        "feature": "packet_loss_rolling_mean_6h",
+        "feature_name": "packet_loss_rolling_mean_6h",
+        "display_name": "Average packet loss (6h)",
+        "value": 0.0593333333333333,
+        "feature_value": 0.0593333333333333,
+        "shap_value": -0.027439840998340827,
+        "direction": "DECREASES_RISK"
+      }
+    ],
+    "disclaimer": "SHAP contributions explain the frozen base model raw log-odds, not the calibration layer. They do not establish that a feature caused a hardware failure."
+  },
+  "anomaly": {
+    "anomaly_score": 1.0353228156207848,
+    "anomaly_percentile": 0.0426666666666666,
+    "robust_deviations": {
+      "detector": "robust_statistical",
+      "overall_anomaly_score": 1.0353228156207848,
+      "score_is_failure_probability": false,
+      "aggregation": "mean of top 5 absolute robust deviations clipped at 10.0",
+      "largest_deviations": [
+        {
+          "feature": "power_change_6h",
+          "clipped_robust_deviation": 1.5409180529391184,
+          "contribution_to_overall_score": 0.3081836105878237
+        },
+        {
+          "feature": "day_of_week",
+          "clipped_robust_deviation": 1.011736109062807,
+          "contribution_to_overall_score": 0.2023472218125614
+        },
+        {
+          "feature": "gpu_utilization",
+          "clipped_robust_deviation": 0.9438226899504661,
+          "contribution_to_overall_score": 0.18876453799009324
+        },
+        {
+          "feature": "uptime_days",
+          "clipped_robust_deviation": 0.9299307776072853,
+          "contribution_to_overall_score": 0.18598615552145706
+        },
+        {
+          "feature": "cpu_rolling_mean_6h",
+          "clipped_robust_deviation": 0.7502064485442476,
+          "contribution_to_overall_score": 0.1500412897088495
+        }
+      ]
+    }
+  },
+  "hybrid": {
+    "risk_level": "HIGH",
+    "reason_codes": [
+      "SUPERVISED_FAILURE_SIGNAL",
+      "PERSISTENT_ABNORMALITY",
+      "OPERATIONAL_ALERT"
+    ]
+  },
+  "root_cause_intelligence": {
+    "incident_id": "INCIDENT_0001",
+    "suspected_component": null,
+    "suspected_component_type": "UNKNOWN",
+    "root_cause_confidence_score": 0.4984857142857143,
+    "telemetry_signature": "UNKNOWN",
+    "inspection_priority": "UNKNOWN",
+    "affected_server_count": 40,
+    "suspected_component_affected_servers": null,
+    "connected_servers": null,
+    "potential_additional_exposure": null,
+    "inference_as_of": "2025-01-26 15:00:00+00:00",
+    "limitations": [
+      "Heuristic hypothesis, not a calibrated causal probability.",
+      "Rack and switch membership may be identical; signature compatibility is a heuristic, not proof.",
+      "Grouping by datacenter conditions the membership background; 100% datacenter sharing alone is not evidence."
+    ],
+    "evidence_status": "UNKNOWN_LOW_EVIDENCE"
+  },
+  "root_cause_availability_note": "Closed-window hypothesis available at inference_as_of, not necessarily at the first warning. Null means no associated saved incident.",
+  "failure_event_reporting_metadata": {
+    "failure_event_id": "failure_000038",
+    "server_id": "server_0038",
+    "first_warning_timestamp": "2025-01-26 13:00:00+00:00",
+    "actual_failure_timestamp": "2025-01-27 07:00:00+00:00",
+    "warning_lead_time_hours": 18.0,
+    "warning_source": "hybrid",
+    "calibrated_failure_probability": 0.044193346790241894,
+    "hybrid_risk_level": "HIGH",
+    "top_driver_1": "uptime_days",
+    "top_driver_1_shap": 0.8740662407024162,
+    "top_driver_2": "disk_utilization",
+    "top_driver_2_shap": 0.37130388235035716,
+    "top_driver_3": "memory_rolling_mean_6h",
+    "top_driver_3_shap": 0.16364942039297842
+  },
+  "disclaimer": "SHAP contributions explain the frozen base model raw log-odds, not the calibration layer. They do not establish that a feature caused a hardware failure.",
+  "root_cause_benchmark_limitation": "Experimental: 0/41 correct signatures, 36 UNKNOWN and 5 incorrect non-UNKNOWN; no component causal ground truth. Rack/switch memberships are identical."
+}

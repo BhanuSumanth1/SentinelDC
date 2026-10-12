@@ -1,0 +1,1536 @@
+{
+  "incident_id": "INCIDENT_0078",
+  "start_timestamp": "2025-01-28 09:00:00+00:00",
+  "end_timestamp": "2025-01-28 11:00:00+00:00",
+  "window_start": "2025-01-28 09:00:00+00:00",
+  "window_end_exclusive": "2025-01-28 12:00:00+00:00",
+  "inference_as_of": "2025-01-28 12:00:00+00:00",
+  "severity": "CRITICAL",
+  "maximum_risk_level": "CRITICAL",
+  "affected_servers": [
+    "server_0201",
+    "server_0210",
+    "server_0218",
+    "server_0223",
+    "server_0232",
+    "server_0234",
+    "server_0238",
+    "server_0240",
+    "server_0246",
+    "server_0262",
+    "server_0264",
+    "server_0268",
+    "server_0270",
+    "server_0278",
+    "server_0285",
+    "server_0299"
+  ],
+  "affected_racks": [
+    "rack_010",
+    "rack_011",
+    "rack_012",
+    "rack_013",
+    "rack_014"
+  ],
+  "affected_switches": [
+    "switch_010",
+    "switch_011",
+    "switch_012",
+    "switch_013",
+    "switch_014"
+  ],
+  "affected_server_count": 16,
+  "alert_count": 16,
+  "dominant_switch": "switch_013",
+  "shared_switch_fraction": 0.3125,
+  "dominant_rack": "rack_013",
+  "shared_rack_fraction": 0.3125,
+  "dominant_datacenter": "dc_02",
+  "shared_datacenter_fraction": 1.0,
+  "suspected_component": "switch_014",
+  "suspected_component_type": "SWITCH",
+  "root_cause_level": "SWITCH_LEVEL",
+  "root_cause_confidence_score": 0.614536126747997,
+  "telemetry_signature": "NETWORK_LIKE",
+  "suspected_component_affected_servers": 2,
+  "connected_servers": 20,
+  "potential_additional_exposure": 18,
+  "inspection_priority": "NETWORK",
+  "reason_codes": [
+    "SHARED_SWITCH",
+    "SYNCHRONIZED_ALERT_ONSET",
+    "CORRELATED_PACKET_LOSS",
+    "CORRELATED_LATENCY",
+    "NETWORK_LIKE"
+  ],
+  "major_incident": true,
+  "candidates": [
+    {
+      "component_node": "RACK:rack_014",
+      "component_id": "rack_014",
+      "component_type": "RACK",
+      "root_cause_confidence_score": 0.614536126747997,
+      "signature": "NETWORK_LIKE",
+      "signature_strengths": {
+        "NETWORK_LIKE": 0.8818873641348445,
+        "DISK_LIKE": 0.1642455380167502,
+        "MEMORY_COMPUTE_LIKE": 0.12390661417194462,
+        "POWER_LIKE": 0.11867849089371847,
+        "THERMAL_LIKE": 0.05721918396550789
+      },
+      "shared_component_fraction": 0.125,
+      "expected_background_fraction_within_datacenter": 0.2,
+      "component_coverage": 0.1,
+      "membership_lift": 0.0,
+      "affected_servers": 2,
+      "connected_servers": 20,
+      "potential_additional_exposure": 18,
+      "affected_server_ids": [
+        "server_0285",
+        "server_0299"
+      ],
+      "connected_server_ids": [
+        "server_0280",
+        "server_0281",
+        "server_0282",
+        "server_0283",
+        "server_0284",
+        "server_0285",
+        "server_0286",
+        "server_0287",
+        "server_0288",
+        "server_0289",
+        "server_0290",
+        "server_0291",
+        "server_0292",
+        "server_0293",
+        "server_0294",
+        "server_0295",
+        "server_0296",
+        "server_0297",
+        "server_0298",
+        "server_0299"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.04000000000000001,
+        "telemetry_signature_strength": 0.8818873641348445,
+        "temporal_coherence": 1.0,
+        "anomaly_evidence": 0.9673095238095237,
+        "hybrid_risk_evidence": 0.8333333333333333
+      },
+      "eligible": false,
+      "reason_codes": [
+        "SHARED_RACK",
+        "SYNCHRONIZED_ALERT_ONSET",
+        "CORRELATED_PACKET_LOSS",
+        "CORRELATED_LATENCY",
+        "NETWORK_LIKE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SWITCH:switch_014",
+      "component_id": "switch_014",
+      "component_type": "SWITCH",
+      "root_cause_confidence_score": 0.614536126747997,
+      "signature": "NETWORK_LIKE",
+      "signature_strengths": {
+        "NETWORK_LIKE": 0.8818873641348445,
+        "DISK_LIKE": 0.1642455380167502,
+        "MEMORY_COMPUTE_LIKE": 0.12390661417194462,
+        "POWER_LIKE": 0.11867849089371847,
+        "THERMAL_LIKE": 0.05721918396550789
+      },
+      "shared_component_fraction": 0.125,
+      "expected_background_fraction_within_datacenter": 0.2,
+      "component_coverage": 0.1,
+      "membership_lift": 0.0,
+      "affected_servers": 2,
+      "connected_servers": 20,
+      "potential_additional_exposure": 18,
+      "affected_server_ids": [
+        "server_0285",
+        "server_0299"
+      ],
+      "connected_server_ids": [
+        "server_0280",
+        "server_0281",
+        "server_0282",
+        "server_0283",
+        "server_0284",
+        "server_0285",
+        "server_0286",
+        "server_0287",
+        "server_0288",
+        "server_0289",
+        "server_0290",
+        "server_0291",
+        "server_0292",
+        "server_0293",
+        "server_0294",
+        "server_0295",
+        "server_0296",
+        "server_0297",
+        "server_0298",
+        "server_0299"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.04000000000000001,
+        "telemetry_signature_strength": 0.8818873641348445,
+        "temporal_coherence": 1.0,
+        "anomaly_evidence": 0.9673095238095237,
+        "hybrid_risk_evidence": 0.8333333333333333
+      },
+      "eligible": true,
+      "reason_codes": [
+        "SHARED_SWITCH",
+        "SYNCHRONIZED_ALERT_ONSET",
+        "CORRELATED_PACKET_LOSS",
+        "CORRELATED_LATENCY",
+        "NETWORK_LIKE"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0299",
+      "component_id": "server_0299",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.5404065584255613,
+      "signature": "NETWORK_LIKE",
+      "signature_strengths": {
+        "NETWORK_LIKE": 0.8791833765593879,
+        "MEMORY_COMPUTE_LIKE": 0.19108700289600924,
+        "DISK_LIKE": 0.18710713217100378,
+        "POWER_LIKE": 0.06835325088599575,
+        "THERMAL_LIKE": 0.0016473199162642543
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0299"
+      ],
+      "connected_server_ids": [
+        "server_0299"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.8791833765593879,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.9873571428571428,
+        "hybrid_risk_evidence": 1.0
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "ELEVATED_PACKET_LOSS",
+        "ELEVATED_LATENCY",
+        "NETWORK_LIKE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0285",
+      "component_id": "server_0285",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.5044156950704324,
+      "signature": "NETWORK_LIKE",
+      "signature_strengths": {
+        "NETWORK_LIKE": 0.884591351710301,
+        "POWER_LIKE": 0.1690037309014412,
+        "DISK_LIKE": 0.14138394386249664,
+        "THERMAL_LIKE": 0.11279104801475152,
+        "MEMORY_COMPUTE_LIKE": 0.05672622544788001
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0285"
+      ],
+      "connected_server_ids": [
+        "server_0285"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.884591351710301,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.9472619047619047,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "ELEVATED_PACKET_LOSS",
+        "ELEVATED_LATENCY",
+        "NETWORK_LIKE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0240",
+      "component_id": "server_0240",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.43403130233339965,
+      "signature": "NETWORK_LIKE",
+      "signature_strengths": {
+        "NETWORK_LIKE": 0.6860442569526461,
+        "MEMORY_COMPUTE_LIKE": 0.1931982087748097,
+        "DISK_LIKE": 0.11252333223677588,
+        "POWER_LIKE": 0.10917368087898938,
+        "THERMAL_LIKE": 0.07260669520538032
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0240"
+      ],
+      "connected_server_ids": [
+        "server_0240"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.6860442569526461,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.7397857142857143,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "ELEVATED_PACKET_LOSS",
+        "ELEVATED_LATENCY",
+        "NETWORK_LIKE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0270",
+      "component_id": "server_0270",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.4156618486628689,
+      "signature": "DISK_LIKE",
+      "signature_strengths": {
+        "DISK_LIKE": 0.5392045375086185,
+        "POWER_LIKE": 0.43696562916932924,
+        "MEMORY_COMPUTE_LIKE": 0.2923542107527092,
+        "NETWORK_LIKE": 0.19136243442342293,
+        "THERMAL_LIKE": 0.1388336349580982
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0270"
+      ],
+      "connected_server_ids": [
+        "server_0270"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.5392045375086185,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.9231904761904762,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "DISK_LIKE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0262",
+      "component_id": "server_0262",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.40843732411964395,
+      "signature": "DISK_LIKE",
+      "signature_strengths": {
+        "DISK_LIKE": 0.51093501076429,
+        "POWER_LIKE": 0.3449323531775593,
+        "NETWORK_LIKE": 0.1843160066525178,
+        "MEMORY_COMPUTE_LIKE": 0.15948575668764753,
+        "THERMAL_LIKE": 0.13705989631354873
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0262"
+      ],
+      "connected_server_ids": [
+        "server_0262"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.51093501076429,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.9216190476190476,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "ELEVATED_SMART_CHANGES",
+        "DISK_LIKE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "RACK:rack_012",
+      "component_id": "rack_012",
+      "component_type": "RACK",
+      "root_cause_confidence_score": 0.3924903517669493,
+      "signature": "NETWORK_LIKE",
+      "signature_strengths": {
+        "NETWORK_LIKE": 0.3905042642106542,
+        "DISK_LIKE": 0.21886455219111117,
+        "THERMAL_LIKE": 0.18017356711423752,
+        "MEMORY_COMPUTE_LIKE": 0.15326380201579648,
+        "POWER_LIKE": 0.1269992833385847
+      },
+      "shared_component_fraction": 0.125,
+      "expected_background_fraction_within_datacenter": 0.2,
+      "component_coverage": 0.1,
+      "membership_lift": 0.0,
+      "affected_servers": 2,
+      "connected_servers": 20,
+      "potential_additional_exposure": 18,
+      "affected_server_ids": [
+        "server_0240",
+        "server_0246"
+      ],
+      "connected_server_ids": [
+        "server_0240",
+        "server_0241",
+        "server_0242",
+        "server_0243",
+        "server_0244",
+        "server_0245",
+        "server_0246",
+        "server_0247",
+        "server_0248",
+        "server_0249",
+        "server_0250",
+        "server_0251",
+        "server_0252",
+        "server_0253",
+        "server_0254",
+        "server_0255",
+        "server_0256",
+        "server_0257",
+        "server_0258",
+        "server_0259"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.04000000000000001,
+        "telemetry_signature_strength": 0.3905042642106542,
+        "temporal_coherence": 0.6666666666666667,
+        "anomaly_evidence": 0.8086428571428571,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "SHARED_RACK",
+        "SYNCHRONIZED_ALERT_ONSET",
+        "CORRELATED_PACKET_LOSS",
+        "CORRELATED_LATENCY",
+        "CORRELATED_SMART_CHANGES",
+        "NETWORK_LIKE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SWITCH:switch_012",
+      "component_id": "switch_012",
+      "component_type": "SWITCH",
+      "root_cause_confidence_score": 0.3924903517669493,
+      "signature": "NETWORK_LIKE",
+      "signature_strengths": {
+        "NETWORK_LIKE": 0.3905042642106542,
+        "DISK_LIKE": 0.21886455219111117,
+        "THERMAL_LIKE": 0.18017356711423752,
+        "MEMORY_COMPUTE_LIKE": 0.15326380201579648,
+        "POWER_LIKE": 0.1269992833385847
+      },
+      "shared_component_fraction": 0.125,
+      "expected_background_fraction_within_datacenter": 0.2,
+      "component_coverage": 0.1,
+      "membership_lift": 0.0,
+      "affected_servers": 2,
+      "connected_servers": 20,
+      "potential_additional_exposure": 18,
+      "affected_server_ids": [
+        "server_0240",
+        "server_0246"
+      ],
+      "connected_server_ids": [
+        "server_0240",
+        "server_0241",
+        "server_0242",
+        "server_0243",
+        "server_0244",
+        "server_0245",
+        "server_0246",
+        "server_0247",
+        "server_0248",
+        "server_0249",
+        "server_0250",
+        "server_0251",
+        "server_0252",
+        "server_0253",
+        "server_0254",
+        "server_0255",
+        "server_0256",
+        "server_0257",
+        "server_0258",
+        "server_0259"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.04000000000000001,
+        "telemetry_signature_strength": 0.3905042642106542,
+        "temporal_coherence": 0.6666666666666667,
+        "anomaly_evidence": 0.8086428571428571,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "SHARED_SWITCH",
+        "SYNCHRONIZED_ALERT_ONSET",
+        "CORRELATED_PACKET_LOSS",
+        "CORRELATED_LATENCY",
+        "CORRELATED_SMART_CHANGES",
+        "NETWORK_LIKE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0264",
+      "component_id": "server_0264",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.3644518263501675,
+      "signature": "THERMAL_LIKE",
+      "signature_strengths": {
+        "THERMAL_LIKE": 0.4668501625435272,
+        "DISK_LIKE": 0.1996107075125754,
+        "POWER_LIKE": 0.1474157197594408,
+        "NETWORK_LIKE": 0.06566231705549211,
+        "MEMORY_COMPUTE_LIKE": 0.04002276615887039
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0264"
+      ],
+      "connected_server_ids": [
+        "server_0264"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.4668501625435272,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.5919761904761904,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "THERMAL_LIKE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0246",
+      "component_id": "server_0246",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.35759310970302827,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "DISK_LIKE": 0.32520577214544644,
+        "THERMAL_LIKE": 0.2877404390230947,
+        "POWER_LIKE": 0.14482488579818004,
+        "MEMORY_COMPUTE_LIKE": 0.11332939525678325,
+        "NETWORK_LIKE": 0.0949642714686623
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0246"
+      ],
+      "connected_server_ids": [
+        "server_0246"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.32520577214544644,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.8775,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "ELEVATED_SMART_CHANGES",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0234",
+      "component_id": "server_0234",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.35746427557091576,
+      "signature": "DISK_LIKE",
+      "signature_strengths": {
+        "DISK_LIKE": 0.36575710228366287,
+        "THERMAL_LIKE": 0.1392326896862232,
+        "NETWORK_LIKE": 0.12971414128260217,
+        "POWER_LIKE": 0.09354062659765136,
+        "MEMORY_COMPUTE_LIKE": 0.07338495245059569
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0234"
+      ],
+      "connected_server_ids": [
+        "server_0234"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.36575710228366287,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.7748333333333334,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "DISK_LIKE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0218",
+      "component_id": "server_0218",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.35593229613095234,
+      "signature": "POWER_LIKE",
+      "signature_strengths": {
+        "POWER_LIKE": 0.35857204166666656,
+        "THERMAL_LIKE": 0.1826144519559018,
+        "MEMORY_COMPUTE_LIKE": 0.13945546396951694,
+        "DISK_LIKE": 0.07046313732164877,
+        "NETWORK_LIKE": 0.006585411569601156
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0218"
+      ],
+      "connected_server_ids": [
+        "server_0218"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.35857204166666656,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.7774761904761904,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "POWER_LIKE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "RACK:rack_013",
+      "component_id": "rack_013",
+      "component_type": "RACK",
+      "root_cause_confidence_score": 0.3526219044087042,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "DISK_LIKE": 0.29981595096815034,
+        "POWER_LIKE": 0.26191508405410086,
+        "THERMAL_LIKE": 0.16570765044730176,
+        "NETWORK_LIKE": 0.14440524646524908,
+        "MEMORY_COMPUTE_LIKE": 0.13191945958060813
+      },
+      "shared_component_fraction": 0.3125,
+      "expected_background_fraction_within_datacenter": 0.2,
+      "component_coverage": 0.25,
+      "membership_lift": 0.14062499999999997,
+      "affected_servers": 5,
+      "connected_servers": 20,
+      "potential_additional_exposure": 15,
+      "affected_server_ids": [
+        "server_0262",
+        "server_0264",
+        "server_0268",
+        "server_0270",
+        "server_0278"
+      ],
+      "connected_server_ids": [
+        "server_0260",
+        "server_0261",
+        "server_0262",
+        "server_0263",
+        "server_0264",
+        "server_0265",
+        "server_0266",
+        "server_0267",
+        "server_0268",
+        "server_0269",
+        "server_0270",
+        "server_0271",
+        "server_0272",
+        "server_0273",
+        "server_0274",
+        "server_0275",
+        "server_0276",
+        "server_0277",
+        "server_0278",
+        "server_0279"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.18437499999999998,
+        "telemetry_signature_strength": 0.29981595096815034,
+        "temporal_coherence": 0.33333333333333337,
+        "anomaly_evidence": 0.7980333333333334,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "SHARED_RACK",
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SWITCH:switch_013",
+      "component_id": "switch_013",
+      "component_type": "SWITCH",
+      "root_cause_confidence_score": 0.3526219044087042,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "DISK_LIKE": 0.29981595096815034,
+        "POWER_LIKE": 0.26191508405410086,
+        "THERMAL_LIKE": 0.16570765044730176,
+        "NETWORK_LIKE": 0.14440524646524908,
+        "MEMORY_COMPUTE_LIKE": 0.13191945958060813
+      },
+      "shared_component_fraction": 0.3125,
+      "expected_background_fraction_within_datacenter": 0.2,
+      "component_coverage": 0.25,
+      "membership_lift": 0.14062499999999997,
+      "affected_servers": 5,
+      "connected_servers": 20,
+      "potential_additional_exposure": 15,
+      "affected_server_ids": [
+        "server_0262",
+        "server_0264",
+        "server_0268",
+        "server_0270",
+        "server_0278"
+      ],
+      "connected_server_ids": [
+        "server_0260",
+        "server_0261",
+        "server_0262",
+        "server_0263",
+        "server_0264",
+        "server_0265",
+        "server_0266",
+        "server_0267",
+        "server_0268",
+        "server_0269",
+        "server_0270",
+        "server_0271",
+        "server_0272",
+        "server_0273",
+        "server_0274",
+        "server_0275",
+        "server_0276",
+        "server_0277",
+        "server_0278",
+        "server_0279"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.18437499999999998,
+        "telemetry_signature_strength": 0.29981595096815034,
+        "temporal_coherence": 0.33333333333333337,
+        "anomaly_evidence": 0.7980333333333334,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "SHARED_SWITCH",
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "RACK:rack_011",
+      "component_id": "rack_011",
+      "component_type": "RACK",
+      "root_cause_confidence_score": 0.3522607158849216,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "DISK_LIKE": 0.23264524449206714,
+        "THERMAL_LIKE": 0.21970731476132854,
+        "POWER_LIKE": 0.18476727787832042,
+        "NETWORK_LIKE": 0.11302275171831147,
+        "MEMORY_COMPUTE_LIKE": 0.10394816724188895
+      },
+      "shared_component_fraction": 0.25,
+      "expected_background_fraction_within_datacenter": 0.2,
+      "component_coverage": 0.2,
+      "membership_lift": 0.062499999999999986,
+      "affected_servers": 4,
+      "connected_servers": 20,
+      "potential_additional_exposure": 16,
+      "affected_server_ids": [
+        "server_0223",
+        "server_0232",
+        "server_0234",
+        "server_0238"
+      ],
+      "connected_server_ids": [
+        "server_0220",
+        "server_0221",
+        "server_0222",
+        "server_0223",
+        "server_0224",
+        "server_0225",
+        "server_0226",
+        "server_0227",
+        "server_0228",
+        "server_0229",
+        "server_0230",
+        "server_0231",
+        "server_0232",
+        "server_0233",
+        "server_0234",
+        "server_0235",
+        "server_0236",
+        "server_0237",
+        "server_0238",
+        "server_0239"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.11750000000000001,
+        "telemetry_signature_strength": 0.23264524449206714,
+        "temporal_coherence": 0.6666666666666667,
+        "anomaly_evidence": 0.5297440476190476,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "SHARED_RACK",
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "SYNCHRONIZED_ALERT_ONSET",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SWITCH:switch_011",
+      "component_id": "switch_011",
+      "component_type": "SWITCH",
+      "root_cause_confidence_score": 0.3522607158849216,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "DISK_LIKE": 0.23264524449206714,
+        "THERMAL_LIKE": 0.21970731476132854,
+        "POWER_LIKE": 0.18476727787832042,
+        "NETWORK_LIKE": 0.11302275171831147,
+        "MEMORY_COMPUTE_LIKE": 0.10394816724188895
+      },
+      "shared_component_fraction": 0.25,
+      "expected_background_fraction_within_datacenter": 0.2,
+      "component_coverage": 0.2,
+      "membership_lift": 0.062499999999999986,
+      "affected_servers": 4,
+      "connected_servers": 20,
+      "potential_additional_exposure": 16,
+      "affected_server_ids": [
+        "server_0223",
+        "server_0232",
+        "server_0234",
+        "server_0238"
+      ],
+      "connected_server_ids": [
+        "server_0220",
+        "server_0221",
+        "server_0222",
+        "server_0223",
+        "server_0224",
+        "server_0225",
+        "server_0226",
+        "server_0227",
+        "server_0228",
+        "server_0229",
+        "server_0230",
+        "server_0231",
+        "server_0232",
+        "server_0233",
+        "server_0234",
+        "server_0235",
+        "server_0236",
+        "server_0237",
+        "server_0238",
+        "server_0239"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.11750000000000001,
+        "telemetry_signature_strength": 0.23264524449206714,
+        "temporal_coherence": 0.6666666666666667,
+        "anomaly_evidence": 0.5297440476190476,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "SHARED_SWITCH",
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "SYNCHRONIZED_ALERT_ONSET",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0223",
+      "component_id": "server_0223",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.3452554234145906,
+      "signature": "POWER_LIKE",
+      "signature_strengths": {
+        "POWER_LIKE": 0.46922645556312437,
+        "THERMAL_LIKE": 0.31781718726880087,
+        "DISK_LIKE": 0.16625253046757904,
+        "MEMORY_COMPUTE_LIKE": 0.08580779728256263,
+        "NETWORK_LIKE": 0.03345145623022473
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0223"
+      ],
+      "connected_server_ids": [
+        "server_0223"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.46922645556312437,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.3940714285714286,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "ELEVATED_POWER_FLUCTUATIONS",
+        "POWER_LIKE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0238",
+      "component_id": "server_0238",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.3424361520104273,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "DISK_LIKE": 0.25660651280361396,
+        "NETWORK_LIKE": 0.2293305735142784,
+        "THERMAL_LIKE": 0.13958898872721665,
+        "POWER_LIKE": 0.10883269601917253,
+        "MEMORY_COMPUTE_LIKE": 0.10120943389047904
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0238"
+      ],
+      "connected_server_ids": [
+        "server_0238"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.25660651280361396,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.8974285714285715,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "ELEVATED_SMART_CHANGES",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0278",
+      "component_id": "server_0278",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.3356224882504369,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "POWER_LIKE": 0.2415518577636524,
+        "DISK_LIKE": 0.2370105946606872,
+        "MEMORY_COMPUTE_LIKE": 0.12960871077719266,
+        "NETWORK_LIKE": 0.10412867981659701,
+        "THERMAL_LIKE": 0.05918418420876842
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0278"
+      ],
+      "connected_server_ids": [
+        "server_0278"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.2415518577636524,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.8669285714285714,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "ELEVATED_SMART_CHANGES",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0268",
+      "component_id": "server_0268",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.30132610335645865,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "NETWORK_LIKE": 0.1765567943782156,
+        "POWER_LIKE": 0.13870986040052274,
+        "MEMORY_COMPUTE_LIKE": 0.03812585352662089,
+        "THERMAL_LIKE": 0.026610374212566127,
+        "DISK_LIKE": 0.012318904394580719
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0268"
+      ],
+      "connected_server_ids": [
+        "server_0268"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.1765567943782156,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.6864523809523809,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "DATACENTER:dc_02",
+      "component_id": "dc_02",
+      "component_type": "DATACENTER",
+      "root_cause_confidence_score": 0.2902250145268041,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "NETWORK_LIKE": 0.25470779620245443,
+        "DISK_LIKE": 0.21155994635007105,
+        "POWER_LIKE": 0.1969938152922044,
+        "THERMAL_LIKE": 0.15622873323627726,
+        "MEMORY_COMPUTE_LIKE": 0.11527820060254002
+      },
+      "shared_component_fraction": 1.0,
+      "expected_background_fraction_within_datacenter": 1.0,
+      "component_coverage": 0.16,
+      "membership_lift": 0.0,
+      "affected_servers": 16,
+      "connected_servers": 100,
+      "potential_additional_exposure": 84,
+      "affected_server_ids": [
+        "server_0201",
+        "server_0210",
+        "server_0218",
+        "server_0223",
+        "server_0232",
+        "server_0234",
+        "server_0238",
+        "server_0240",
+        "server_0246",
+        "server_0262",
+        "server_0264",
+        "server_0268",
+        "server_0270",
+        "server_0278",
+        "server_0285",
+        "server_0299"
+      ],
+      "connected_server_ids": [
+        "server_0200",
+        "server_0201",
+        "server_0202",
+        "server_0203",
+        "server_0204",
+        "server_0205",
+        "server_0206",
+        "server_0207",
+        "server_0208",
+        "server_0209",
+        "server_0210",
+        "server_0211",
+        "server_0212",
+        "server_0213",
+        "server_0214",
+        "server_0215",
+        "server_0216",
+        "server_0217",
+        "server_0218",
+        "server_0219",
+        "server_0220",
+        "server_0221",
+        "server_0222",
+        "server_0223",
+        "server_0224",
+        "server_0225",
+        "server_0226",
+        "server_0227",
+        "server_0228",
+        "server_0229",
+        "server_0230",
+        "server_0231",
+        "server_0232",
+        "server_0233",
+        "server_0234",
+        "server_0235",
+        "server_0236",
+        "server_0237",
+        "server_0238",
+        "server_0239",
+        "server_0240",
+        "server_0241",
+        "server_0242",
+        "server_0243",
+        "server_0244",
+        "server_0245",
+        "server_0246",
+        "server_0247",
+        "server_0248",
+        "server_0249",
+        "server_0250",
+        "server_0251",
+        "server_0252",
+        "server_0253",
+        "server_0254",
+        "server_0255",
+        "server_0256",
+        "server_0257",
+        "server_0258",
+        "server_0259",
+        "server_0260",
+        "server_0261",
+        "server_0262",
+        "server_0263",
+        "server_0264",
+        "server_0265",
+        "server_0266",
+        "server_0267",
+        "server_0268",
+        "server_0269",
+        "server_0270",
+        "server_0271",
+        "server_0272",
+        "server_0273",
+        "server_0274",
+        "server_0275",
+        "server_0276",
+        "server_0277",
+        "server_0278",
+        "server_0279",
+        "server_0280",
+        "server_0281",
+        "server_0282",
+        "server_0283",
+        "server_0284",
+        "server_0285",
+        "server_0286",
+        "server_0287",
+        "server_0288",
+        "server_0289",
+        "server_0290",
+        "server_0291",
+        "server_0292",
+        "server_0293",
+        "server_0294",
+        "server_0295",
+        "server_0296",
+        "server_0297",
+        "server_0298",
+        "server_0299"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.064,
+        "telemetry_signature_strength": 0.25470779620245443,
+        "temporal_coherence": 0.33333333333333337,
+        "anomaly_evidence": 0.687313988095238,
+        "hybrid_risk_evidence": 0.6875
+      },
+      "eligible": false,
+      "reason_codes": [
+        "SHARED_DATACENTER",
+        "INSUFFICIENT_COMPONENT_COVERAGE",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0210",
+      "component_id": "server_0210",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.26937681960415594,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "NETWORK_LIKE": 0.1562644212737665,
+        "POWER_LIKE": 0.13288088109354407,
+        "THERMAL_LIKE": 0.10936838964035615,
+        "MEMORY_COMPUTE_LIKE": 0.043085166225068985,
+        "DISK_LIKE": 0.016240708602112252
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0210"
+      ],
+      "connected_server_ids": [
+        "server_0210"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.1562644212737665,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.4176904761904761,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0232",
+      "component_id": "server_0232",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.26435355072172073,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "THERMAL_LIKE": 0.28219039336307344,
+        "MEMORY_COMPUTE_LIKE": 0.15539048534391844,
+        "DISK_LIKE": 0.1419648324134128,
+        "POWER_LIKE": 0.06746933333333334,
+        "NETWORK_LIKE": 0.05959483584614056
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0232"
+      ],
+      "connected_server_ids": [
+        "server_0232"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.28219039336307344,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.0526428571428571,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SERVER:server_0201",
+      "component_id": "server_0201",
+      "component_type": "SERVER",
+      "root_cause_confidence_score": 0.25101622167397253,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "NETWORK_LIKE": 0.19357441050541396,
+        "POWER_LIKE": 0.12044804166666667,
+        "DISK_LIKE": 0.10237438245263339,
+        "MEMORY_COMPUTE_LIKE": 0.03217978019997576,
+        "THERMAL_LIKE": 0.025523876742864753
+      },
+      "shared_component_fraction": 0.0625,
+      "expected_background_fraction_within_datacenter": 0.01,
+      "component_coverage": 1.0,
+      "membership_lift": 0.05303030303030303,
+      "affected_servers": 1,
+      "connected_servers": 1,
+      "potential_additional_exposure": 0,
+      "affected_server_ids": [
+        "server_0201"
+      ],
+      "connected_server_ids": [
+        "server_0201"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.0625,
+        "telemetry_signature_strength": 0.19357441050541396,
+        "temporal_coherence": 0.5,
+        "anomaly_evidence": 0.1408095238095238,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "ABOVE_BACKGROUND_MEMBERSHIP",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "RACK:rack_010",
+      "component_id": "rack_010",
+      "component_type": "RACK",
+      "root_cause_confidence_score": 0.24985762005144613,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "POWER_LIKE": 0.20396698814229244,
+        "NETWORK_LIKE": 0.11880808111626052,
+        "THERMAL_LIKE": 0.10583557277970757,
+        "MEMORY_COMPUTE_LIKE": 0.07157347013152056,
+        "DISK_LIKE": 0.0630260761254648
+      },
+      "shared_component_fraction": 0.1875,
+      "expected_background_fraction_within_datacenter": 0.2,
+      "component_coverage": 0.15,
+      "membership_lift": 0.0,
+      "affected_servers": 3,
+      "connected_servers": 20,
+      "potential_additional_exposure": 17,
+      "affected_server_ids": [
+        "server_0201",
+        "server_0210",
+        "server_0218"
+      ],
+      "connected_server_ids": [
+        "server_0200",
+        "server_0201",
+        "server_0202",
+        "server_0203",
+        "server_0204",
+        "server_0205",
+        "server_0206",
+        "server_0207",
+        "server_0208",
+        "server_0209",
+        "server_0210",
+        "server_0211",
+        "server_0212",
+        "server_0213",
+        "server_0214",
+        "server_0215",
+        "server_0216",
+        "server_0217",
+        "server_0218",
+        "server_0219"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.06,
+        "telemetry_signature_strength": 0.20396698814229244,
+        "temporal_coherence": 0.33333333333333337,
+        "anomaly_evidence": 0.4453253968253968,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "SHARED_RACK",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    },
+    {
+      "component_node": "SWITCH:switch_010",
+      "component_id": "switch_010",
+      "component_type": "SWITCH",
+      "root_cause_confidence_score": 0.24985762005144613,
+      "signature": "UNKNOWN",
+      "signature_strengths": {
+        "POWER_LIKE": 0.20396698814229244,
+        "NETWORK_LIKE": 0.11880808111626052,
+        "THERMAL_LIKE": 0.10583557277970757,
+        "MEMORY_COMPUTE_LIKE": 0.07157347013152056,
+        "DISK_LIKE": 0.0630260761254648
+      },
+      "shared_component_fraction": 0.1875,
+      "expected_background_fraction_within_datacenter": 0.2,
+      "component_coverage": 0.15,
+      "membership_lift": 0.0,
+      "affected_servers": 3,
+      "connected_servers": 20,
+      "potential_additional_exposure": 17,
+      "affected_server_ids": [
+        "server_0201",
+        "server_0210",
+        "server_0218"
+      ],
+      "connected_server_ids": [
+        "server_0200",
+        "server_0201",
+        "server_0202",
+        "server_0203",
+        "server_0204",
+        "server_0205",
+        "server_0206",
+        "server_0207",
+        "server_0208",
+        "server_0209",
+        "server_0210",
+        "server_0211",
+        "server_0212",
+        "server_0213",
+        "server_0214",
+        "server_0215",
+        "server_0216",
+        "server_0217",
+        "server_0218",
+        "server_0219"
+      ],
+      "evidence": {
+        "shared_component_evidence": 0.06,
+        "telemetry_signature_strength": 0.20396698814229244,
+        "temporal_coherence": 0.33333333333333337,
+        "anomaly_evidence": 0.4453253968253968,
+        "hybrid_risk_evidence": 0.6666666666666666
+      },
+      "eligible": false,
+      "reason_codes": [
+        "SHARED_SWITCH",
+        "HYPOTHESIS_NOT_CONFIRMED"
+      ]
+    }
+  ],
+  "limitations": [
+    "Heuristic hypothesis, not a calibrated causal probability.",
+    "Rack and switch membership may be identical; signature compatibility is a heuristic, not proof.",
+    "Grouping by datacenter conditions the membership background; 100% datacenter sharing alone is not evidence."
+  ],
+  "baseline_example": {
+    "server_id": "server_0201",
+    "timestamp": "2025-01-28 09:00:00+00:00",
+    "history_window": "[timestamp - 48 hours, timestamp); minimum 12 past observations",
+    "baseline_available": true,
+    "telemetry": {
+      "packet_loss_pct": {
+        "current": 0.015,
+        "server_historical_median": 0.0215,
+        "rack_historical_median": 0.05075,
+        "switch_historical_median": 0.05075
+      },
+      "network_latency_ms": {
+        "current": 8.313,
+        "server_historical_median": 7.7265,
+        "rack_historical_median": 4.4959999999999996,
+        "switch_historical_median": 4.4959999999999996
+      },
+      "temperature_c": {
+        "current": 41.343,
+        "server_historical_median": 43.9655,
+        "rack_historical_median": 60.2395,
+        "switch_historical_median": 60.2395
+      },
+      "power_watts": {
+        "current": 180.383,
+        "server_historical_median": 187.132,
+        "rack_historical_median": 271.385,
+        "switch_historical_median": 271.385
+      },
+      "smart_error_count": {
+        "current": 0.0,
+        "server_historical_median": 0.0,
+        "rack_historical_median": 0.0,
+        "switch_historical_median": 0.0
+      }
+    }
+  },
+  "summary": "INCIDENT_0078 \u2014 CRITICAL. 16 servers produced 16 alerts in this bounded window. Suspected component: switch_014; signature: NETWORK_LIKE; evidence score 0.615. Observed indicators: shared switch, synchronized alert onset, correlated packet loss, correlated latency, network like. Potential connected-server radius: 20; additional exposure: 18. Recommended inspection target: NETWORK. This is not a confirmed diagnosis."
+}

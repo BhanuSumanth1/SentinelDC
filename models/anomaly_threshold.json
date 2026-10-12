@@ -1,0 +1,22 @@
+{
+  "selected_detector": "robust_statistical",
+  "threshold": 2.2027039036822993,
+  "extreme_threshold": 10.0,
+  "validation_pr_auc": 0.0264662077810913,
+  "validation_precision": 0.022839506172839506,
+  "validation_recall": 0.6395061728395062,
+  "validation_f2": 0.09992283950617284,
+  "preferred_recall_met": true,
+  "selection_split": "VALIDATION",
+  "model_selection_rule": "Highest complete-validation average precision; exact ties: ROC-AUC, then detector name.",
+  "selection_rule": "Among validation thresholds with recall >= 0.60 choose highest F2; ties minimize false positives, then maximize threshold. If none qualifies, highest F2 with the same tie rules. F2 penalizes excessive false positives; no external alert-budget standard is claimed.",
+  "extreme_rule": "Maximum of validation score 99.9th percentile and next representable score above selected threshold; no TEST scores used.",
+  "persistence_hours": 2,
+  "cooldown_hours": 6.0,
+  "comparison_operator": ">=",
+  "score_is_failure_probability": false,
+  "validation_start": "2025-01-22 00:00:00+00:00",
+  "validation_end": "2025-01-25 11:00:00+00:00",
+  "selected_model_sha256": "e9ea931dcb9bf4a2f8f029b4a2455f055f25c0d18a614ad37c1e53ddad286d53",
+  "preprocessor_sha256": "a1324f55b278cab213eaadfb75e0e8302dd51a4e983e28416e7da6aba5571746"
+}

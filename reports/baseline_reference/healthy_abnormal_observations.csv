@@ -1,0 +1,11 @@
+feature,abnormal_threshold_ge,cohort,observations,abnormal_observations,abnormal_pct
+cpu_utilization,90,no_failure_next_24h,52681,47,0.08921622596381998
+cpu_utilization,90,servers_without_any_simulated_incident,21600,26,0.12037037037037036
+temperature_c,75,no_failure_next_24h,52681,3,0.005694652721094892
+temperature_c,75,servers_without_any_simulated_incident,21600,1,0.004629629629629629
+packet_loss_pct,1,no_failure_next_24h,52681,78,0.1480609707484672
+packet_loss_pct,1,servers_without_any_simulated_incident,21600,3,0.013888888888888888
+smart_error_count,5,no_failure_next_24h,52681,63,0.11958770714299273
+smart_error_count,5,servers_without_any_simulated_incident,21600,0,0.0
+smart_error_count,1,no_failure_next_24h,52681,6568,12.467493024050416
+smart_error_count,1,servers_without_any_simulated_incident,21600,2441,11.300925925925926

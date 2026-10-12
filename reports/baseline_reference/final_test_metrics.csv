@@ -1,0 +1,2 @@
+model,split,pr_auc,roc_auc,precision,recall,f1,accuracy,threshold,true_positive,false_positive,true_negative,false_negative
+hist_gradient_boosting,final_test,0.9497035996010913,0.9987342817618896,0.8471737613398465,0.9203942380591357,0.8822674418604651,0.994,0.9,1214,219,52462,105

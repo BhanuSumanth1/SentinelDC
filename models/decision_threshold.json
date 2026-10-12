@@ -1,0 +1,47 @@
+{
+  "model_name": "lightgbm",
+  "selected_threshold": 0.037,
+  "validation_pr_auc": 0.0831878835740723,
+  "selection_split": "validation",
+  "model_selection_rule": "Highest validation PR-AUC (average precision); exact ties: F2 at 0.5, then model name.",
+  "threshold_rule": "Highest policy-validation F2 among recall >= 0.80 and precision >= 0.20; otherwise highest F2 overall. Ties: precision, recall, higher threshold.",
+  "calibrated": true,
+  "score_type": "calibrated_failure_probability",
+  "calibration_method": "unweighted_Platt_on_logit_scores",
+  "calibration_window": {
+    "start": "2025-01-22T00:00:00+00:00",
+    "end": "2025-01-23T03:00:00+00:00",
+    "rows": 14000,
+    "positive_rows": 311
+  },
+  "policy_validation_window": {
+    "start": "2025-01-24T04:00:00+00:00",
+    "end": "2025-01-25T11:00:00+00:00",
+    "rows": 16000,
+    "positive_rows": 285
+  },
+  "calibration_policy_purge_hours": 24,
+  "preferred_constraints_met": false,
+  "validation_metrics": {
+    "pr_auc": 0.06129468257071486,
+    "roc_auc": 0.715896869121579,
+    "precision": 0.034367328721267576,
+    "recall": 0.5403508771929825,
+    "f1": 0.06462442299622324,
+    "f2": 0.136986301369863,
+    "brier_score": 0.017405967217380428,
+    "accuracy": 0.721375,
+    "threshold": 0.037,
+    "true_positive": 154,
+    "false_positive": 4327,
+    "true_negative": 11388,
+    "false_negative": 131
+  },
+  "emergency_threshold": 0.5,
+  "emergency_rule": "Maximum of 0.50, policy-validation calibrated probability 99.9th percentile, and selected threshold + 0.05; capped at 0.999999.",
+  "validation_emergency_observations": 0,
+  "alert_persistence_hours": 2,
+  "cooldown_hours": 6.0,
+  "policy_rule": "Two consecutive hourly probabilities >= threshold OR one >= emergency; then per-server cooldown.",
+  "calibration_assessment_note": "Later validation window is disjoint from calibration fitting; model choice uses all validation, so this is development evidence, not an independent holdout."
+}

@@ -1,0 +1,16 @@
+feature,server_trajectories,repeated_exact_trajectories
+cpu_utilization,500,0
+memory_utilization,500,0
+disk_utilization,500,0
+gpu_utilization,500,0
+temperature_c,500,0
+disk_read_mb_s,500,0
+disk_write_mb_s,500,0
+network_in_mb_s,500,0
+network_out_mb_s,500,0
+packet_loss_pct,500,0
+network_latency_ms,500,0
+smart_error_count,500,0
+fan_speed_rpm,500,0
+power_watts,500,0
+uptime_days,500,0

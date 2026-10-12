@@ -1,0 +1,2 @@
+failures_detected,failures_missed,false_alerts,total_actual_failures,detection_rate,false_alerts_per_1000_observations,false_alerts_per_1000_healthy_observations,healthy_telemetry_observations,telemetry_observations,count_unit
+832,6,35291,838,0.9928400954653938,653.5370370370371,663.8388322485986,53162,54000,telemetry_observation

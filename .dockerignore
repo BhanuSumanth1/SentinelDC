@@ -1,0 +1,11 @@
+*
+!Dockerfile
+!requirements-app.txt
+!dashboard/
+!dashboard/**
+!api/
+!api/**
+!.streamlit/
+!.streamlit/**
+**/__pycache__
+**/*.pyc

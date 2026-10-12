@@ -1,0 +1,6 @@
+failure_type,detected,actual,missed,event_detection_rate
+disk_failure,16,16,0,1.0
+memory_failure,5,5,0,1.0
+network_failure,4,4,0,1.0
+overheating,8,11,3,0.7272727272727273
+power_failure,6,7,1,0.8571428571428571

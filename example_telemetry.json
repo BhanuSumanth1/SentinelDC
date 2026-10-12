@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-02-01T12:00:00Z",
+  "cpu_utilization": 92,
+  "memory_utilization": 94,
+  "disk_utilization": 96,
+  "gpu_utilization": 45,
+  "temperature_c": 88,
+  "disk_read_mb_s": 210,
+  "disk_write_mb_s": 120,
+  "network_in_mb_s": 160,
+  "network_out_mb_s": 115,
+  "packet_loss_pct": 3.2,
+  "network_latency_ms": 48,
+  "smart_error_count": 14,
+  "fan_speed_rpm": 5200,
+  "power_watts": 540,
+  "uptime_days": 145
+}

@@ -1,0 +1,83 @@
+[1/6] Generating telemetry data...
+Rows: 360,000 | Servers: 500
+Positive telemetry rows: 7,056 (1.96%)
+Distinct failure incidents with observed warning rows: 300
+Date range: 2025-01-01 00:00:00 to 2025-01-30 23:00:00
+Saved: sentineldc/data/raw/server_telemetry.csv
+
+[2/6] Validating data...
+Validation report
+  rows: 360000
+  unique_servers: 500
+  duplicate_rows: 0
+  missing_values: 0
+  expected_null_event_metadata: 705888
+  failure_events: 300
+  positive_rate: 0.0196
+Validation passed.
+
+[3/6] Preprocessing...
+Saved 360,000 processed rows: sentineldc/data/processed/server_telemetry_processed.csv
+Residual missing values use medians fitted on training data only.
+
+[4/6] Training models...
+Training: 2025-01-01T00:00:00+00:00 to 2025-01-20T23:00:00+00:00 | 240,000 rows | Positive failures: 1.81%
+Validation: 2025-01-22T00:00:00+00:00 to 2025-01-25T11:00:00+00:00 | 42,000 rows | Positive failures: 2.26%
+Test: 2025-01-26T12:00:00+00:00 to 2025-01-30T23:00:00+00:00 | 54,000 rows | Positive failures: 2.44%
+Purged rows across both boundaries: 24,000
+Training logistic_regression...
+Training random_forest...
+Training hist_gradient_boosting...
+
+[5/6] Selecting model and threshold using validation data...
+
+VALIDATION comparison (AP = PR-AUC; comparison threshold 0.50)
+                 model  pr_auc  recall  precision     f1  roc_auc
+hist_gradient_boosting  0.9485  0.9842     0.7411 0.8455   0.9987
+         random_forest  0.9430  0.9599     0.7416 0.8368   0.9978
+   logistic_regression  0.8573  0.9715     0.4721 0.6354   0.9958
+Selected: hist_gradient_boosting | Validation-selected threshold: 0.90
+
+[6/6] Running final evaluation on untouched test data...
+
+ROW-LEVEL METRICS — FINAL TEST
+                 model      split  pr_auc  roc_auc  precision  recall     f1  accuracy  threshold  true_positive  false_positive  true_negative  false_negative
+hist_gradient_boosting final_test  0.9497   0.9987     0.8472  0.9204 0.8823    0.9940     0.9000           1214             219          52462             105
+
+Operational Summary (telemetry observations, not distinct incidents)
+Actual failures: 1,319
+Detected failures: 1,214
+Missed failures: 105
+False alerts: 219
+Failure detection rate: 92.04%
+False alerts per 1,000 observations: 4.06
+False alerts per 1,000 healthy observations: 4.16
+
+SentinelDC evaluation pipeline completed successfully.
+Best model: hist_gradient_boosting
+Selected threshold: 0.90
+
+FINAL UNTOUCHED TEST RESULTS — ROW-LEVEL METRICS
+PR-AUC: 0.9497
+Recall: 0.9204
+Precision: 0.8472
+F1: 0.8823
+
+OPERATIONAL RESULTS (telemetry observations)
+Failures detected: 1,214
+Failures missed: 105
+False alerts: 219
+
+FAILURE EVENT ANALYSIS
+Actual failure events: 63
+Detected failure events: 63
+Missed failure events: 0
+Event detection rate: 100.00%
+
+FAILURE WARNING LEAD TIME (detected events)
+Median lead time: 24.00 hours
+Mean lead time: 22.48 hours
+25th percentile: 23.00 hours
+75th percentile: 24.00 hours
+Detected at least 12 hours early: 61 (96.83% of all test events)
+Detected at least 6 hours early: 63 (100.00% of all test events)

@@ -1,0 +1,38 @@
+{
+  "utility_formula": "utility = event_detection_rate - 0.25 * false_alerts_per_server_day + 0.10 * operational_precision + 0.10 * detected_ge_6h_fraction_of_all_events. Undefined precision/early fraction contributes zero. Event detection already penalizes misses (1 - missed/events). No TEST-informed coefficient changes.",
+  "selection_rule": "Maximum validation utility; exact ties: supervised-only first, fewer false alerts, higher median lead time, candidate_id. No row metric selects the policy.",
+  "outer_split": {
+    "horizon_hours": 24,
+    "fractions_before_purge": [
+      0.7,
+      0.15,
+      0.15
+    ],
+    "purged_rows": 24000,
+    "training": {
+      "start": "2025-01-01T00:00:00+00:00",
+      "end": "2025-01-20T23:00:00+00:00",
+      "rows": 240000,
+      "positive_rate": 0.020979166666666667
+    },
+    "validation": {
+      "start": "2025-01-22T00:00:00+00:00",
+      "end": "2025-01-25T11:00:00+00:00",
+      "rows": 42000,
+      "positive_rate": 0.019285714285714285
+    },
+    "test": {
+      "start": "2025-01-26T12:00:00+00:00",
+      "end": "2025-01-30T23:00:00+00:00",
+      "rows": 54000,
+      "positive_rate": 0.015518518518518518
+    }
+  },
+  "source_sha256": {
+    "src/hybrid_risk.py": "fbc865eefb28920183d7a49723205561d8e659a01bf864a01da85e31b7fb06d6",
+    "src/hybrid_evaluation.py": "d8df05640a8464de36742d932bd3baae20c9d9937074db8593d6d60a0681c900",
+    "run_hybrid_pipeline.py": "9476bde56719add979d381f30f01440959435afe7923e061eb327e67f0c1011a"
+  },
+  "test_use": "Only frozen selected hybrid policy applied to cached TEST scores. Detector overlap is inspected afterward, never for selection.",
+  "underlying_models_refit": false
+}

@@ -1,0 +1,74 @@
+[1/3] Loading frozen models for VALIDATION inference only...
+[2/3] Normalization and operational policy comparison on VALIDATION...
+      candidate_id  utility  event_detection_rate  operational_precision  false_alerts_per_server_day  selected
+   supervised_only 0.476799              0.674419               0.036297                     1.046857     False
+      anomaly_only 0.295883              0.813953               0.023681                     2.379429     False
+    agreement_0.75 0.365738              0.395349               0.057514                     0.290286     False
+    agreement_0.90 0.297403              0.302326               0.070671                     0.150286     False
+    agreement_0.95 0.138388              0.139535               0.057971                     0.074286     False
+       rescue_0.50 0.493641              0.697674               0.036448                     1.072571     False
+       rescue_0.75 0.496392              0.697674               0.036807                     1.061714     False
+weighted_0.75_0.40 0.573982              0.883721               0.035404                     1.588000      True
+weighted_0.75_0.60 0.418512              0.534884               0.041563                     0.658857     False
+weighted_0.90_0.40 0.492130              0.790698               0.033791                     1.486857     False
+weighted_0.90_0.60 0.410263              0.534884               0.041930                     0.692000     False
+   gated_0.50_0.90 0.425253              0.441860               0.066514                     0.232571     False
+   gated_0.50_0.95 0.168664              0.186047               0.041322                     0.132571     False
+   gated_0.75_0.90 0.357574              0.372093               0.070423                     0.188571     False
+   gated_0.75_0.95 0.176543              0.186047               0.051546                     0.105143     False
+[3/3] Frozen policy replay on cached TEST signals, then detector overlap...
+{
+  "metrics": {
+    "selected_strategy": "WEIGHTED_HYBRID",
+    "total_failure_events": 43,
+    "detected_failure_events": 41,
+    "missed_failure_events": 2,
+    "event_detection_rate": 0.9534883720930233,
+    "mean_lead_time_hours": 18.463414634146343,
+    "median_lead_time_hours": 21.0,
+    "min_lead_time_hours": 1.0,
+    "max_lead_time_hours": 24.0,
+    "p25_lead_time_hours": 16.0,
+    "p75_lead_time_hours": 23.0,
+    "complete_warning_window_events": 25,
+    "partial_warning_window_events": 18,
+    "events_after_test_end": 12,
+    "early_detection_denominator": "all_failure_events_in_test_warning_rows",
+    "lead_time_statistics_population": "detected_events_only",
+    "detected_ge_24h_count": 8,
+    "detected_ge_24h_pct": 18.6046511627907,
+    "detected_ge_12h_count": 34,
+    "detected_ge_12h_pct": 79.06976744186046,
+    "detected_ge_6h_count": 37,
+    "detected_ge_6h_pct": 86.04651162790698,
+    "detected_ge_3h_count": 39,
+    "detected_ge_3h_pct": 90.69767441860465,
+    "total_operational_alerts": 3890,
+    "true_operational_alerts": 110,
+    "false_operational_alerts": 3780,
+    "operational_precision": 0.028277634961439587,
+    "redundant_true_alerts": 69,
+    "false_alerts_per_1000_healthy_observations": 71.10341973590158,
+    "false_alerts_per_server_day": 1.68,
+    "observed_server_days": 2250.0,
+    "row_pr_auc": 0.0552954785735553,
+    "row_roc_auc": 0.7451878748785964,
+    "row_precision": 0.02811853893866299,
+    "row_recall": 0.7303102625298329,
+    "row_f1": 0.054152103703048265,
+    "row_f2": 0.12182983636580802,
+    "row_true_positive": 612,
+    "row_false_positive": 21153,
+    "row_true_negative": 32009,
+    "row_false_negative": 226,
+    "row_false_alerts_per_1000_healthy_observations": 397.89699409352545,
+    "row_threshold": 0.4
+  },
+  "overlap": {
+    "BOTH": 34,
+    "SUPERVISED_ONLY": 2,
+    "ANOMALY_ONLY": 5,
+    "NEITHER": 2
+  }
+}
+Hybrid pipeline completed; all pre-existing frozen artifacts unchanged.

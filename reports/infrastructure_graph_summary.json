@@ -1,0 +1,9 @@
+{
+  "number_of_datacenters": 5,
+  "number_of_racks": 25,
+  "number_of_switches": 25,
+  "number_of_servers": 500,
+  "number_of_nodes": 555,
+  "number_of_edges": 550,
+  "limitation": "Identical rack/switch server membership cannot establish which component caused an incident."
+}

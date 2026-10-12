@@ -1,0 +1,13 @@
+{
+  "exact_duplicate_rows": 0,
+  "duplicate_server_timestamp_keys": 0,
+  "duplicate_numeric_telemetry_vectors": 0,
+  "full_24h_events_compared": 288,
+  "partial_events_excluded": 12,
+  "event_pairs_compared": 41328,
+  "identical_event_pairs": 0,
+  "near_duplicate_pairs": 0,
+  "maximum_shape_correlation": 0.976539948652847,
+  "minimum_standardized_shape_rmse": 0.9930335257463228,
+  "repeated_exact_server_feature_traces": 0
+}

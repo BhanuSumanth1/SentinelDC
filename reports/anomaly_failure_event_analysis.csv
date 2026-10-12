@@ -1,0 +1,44 @@
+failure_event_id,server_id,failure_type,actual_failure_timestamp,detected,first_alert_timestamp,lead_time_hours,observed_warning_rows,observed_max_lead_time_hours,complete_24h_warning_window,failure_after_test_end
+failure_000009,server_0009,memory_failure,2025-01-28 00:00:00+00:00,True,2025-01-27 01:00:00+00:00,23.0,24,24.0,True,False
+failure_000021,server_0021,memory_failure,2025-01-30 01:00:00+00:00,True,2025-01-29 04:00:00+00:00,21.0,24,24.0,True,False
+failure_000038,server_0038,power_failure,2025-01-27 07:00:00+00:00,False,,,19,19.0,False,False
+failure_000050,server_0050,overheating,2025-01-28 14:00:00+00:00,True,2025-01-27 18:00:00+00:00,20.0,24,24.0,True,False
+failure_000057,server_0057,network_failure,2025-01-29 18:00:00+00:00,True,2025-01-29 02:00:00+00:00,16.0,24,24.0,True,False
+failure_000061,server_0061,memory_failure,2025-01-31 10:00:00+00:00,True,2025-01-30 13:00:00+00:00,21.0,14,24.0,False,True
+failure_000066,server_0066,overheating,2025-01-31 08:00:00+00:00,False,,,16,24.0,False,True
+failure_000073,server_0073,disk_failure,2025-01-31 01:00:00+00:00,True,2025-01-30 08:00:00+00:00,17.0,23,24.0,False,True
+failure_000075,server_0075,power_failure,2025-01-28 12:00:00+00:00,True,2025-01-27 12:00:00+00:00,24.0,24,24.0,True,False
+failure_000092,server_0092,power_failure,2025-01-31 03:00:00+00:00,True,2025-01-30 15:00:00+00:00,12.0,21,24.0,False,True
+failure_000102,server_0102,disk_failure,2025-01-27 18:00:00+00:00,True,2025-01-26 19:00:00+00:00,23.0,24,24.0,True,False
+failure_000110,server_0110,power_failure,2025-01-30 13:00:00+00:00,True,2025-01-29 21:00:00+00:00,16.0,24,24.0,True,False
+failure_000113,server_0113,disk_failure,2025-01-26 14:00:00+00:00,True,2025-01-26 13:00:00+00:00,1.0,2,2.0,False,False
+failure_000122,server_0122,disk_failure,2025-01-31 18:00:00+00:00,True,2025-01-30 20:00:00+00:00,22.0,6,24.0,False,True
+failure_000129,server_0129,disk_failure,2025-01-27 12:00:00+00:00,True,2025-01-26 15:00:00+00:00,21.0,24,24.0,True,False
+failure_000147,server_0147,overheating,2025-01-29 21:00:00+00:00,True,2025-01-28 21:00:00+00:00,24.0,24,24.0,True,False
+failure_000148,server_0148,power_failure,2025-01-29 17:00:00+00:00,True,2025-01-28 23:00:00+00:00,18.0,24,24.0,True,False
+failure_000186,server_0186,overheating,2025-01-31 16:00:00+00:00,True,2025-01-30 19:00:00+00:00,21.0,8,24.0,False,True
+failure_000202,server_0202,disk_failure,2025-01-29 00:00:00+00:00,True,2025-01-28 03:00:00+00:00,21.0,24,24.0,True,False
+failure_000229,server_0229,power_failure,2025-01-30 21:00:00+00:00,True,2025-01-30 07:00:00+00:00,14.0,24,24.0,True,False
+failure_000230,server_0230,network_failure,2025-01-31 01:00:00+00:00,True,2025-01-30 16:00:00+00:00,9.0,23,24.0,False,True
+failure_000268,server_0268,disk_failure,2025-01-31 19:00:00+00:00,True,2025-01-30 22:00:00+00:00,21.0,5,24.0,False,True
+failure_000270,server_0270,disk_failure,2025-01-30 08:00:00+00:00,True,2025-01-29 13:00:00+00:00,19.0,24,24.0,True,False
+failure_000273,server_0273,disk_failure,2025-01-30 19:00:00+00:00,True,2025-01-29 23:00:00+00:00,20.0,24,24.0,True,False
+failure_000291,server_0291,disk_failure,2025-01-27 10:00:00+00:00,True,2025-01-26 13:00:00+00:00,21.0,22,22.0,False,False
+failure_000310,server_0310,overheating,2025-01-27 06:00:00+00:00,False,,,18,18.0,False,False
+failure_000318,server_0318,disk_failure,2025-01-29 14:00:00+00:00,True,2025-01-28 15:00:00+00:00,23.0,24,24.0,True,False
+failure_000321,server_0321,disk_failure,2025-01-29 00:00:00+00:00,True,2025-01-28 02:00:00+00:00,22.0,24,24.0,True,False
+failure_000349,server_0349,memory_failure,2025-01-28 05:00:00+00:00,True,2025-01-27 05:00:00+00:00,24.0,24,24.0,True,False
+failure_000374,server_0374,memory_failure,2025-01-28 05:00:00+00:00,True,2025-01-27 09:00:00+00:00,20.0,24,24.0,True,False
+failure_000375,server_0375,disk_failure,2025-01-27 12:00:00+00:00,True,2025-01-26 13:00:00+00:00,23.0,24,24.0,True,False
+failure_000378,server_0378,network_failure,2025-01-31 13:00:00+00:00,True,2025-01-30 17:00:00+00:00,20.0,11,24.0,False,True
+failure_000384,server_0384,overheating,2025-01-30 02:00:00+00:00,True,2025-01-29 15:00:00+00:00,11.0,24,24.0,True,False
+failure_000406,server_0406,overheating,2025-01-29 01:00:00+00:00,True,2025-01-28 06:00:00+00:00,19.0,24,24.0,True,False
+failure_000412,server_0412,disk_failure,2025-01-31 09:00:00+00:00,True,2025-01-30 14:00:00+00:00,19.0,15,24.0,False,True
+failure_000416,server_0416,overheating,2025-01-31 16:00:00+00:00,True,2025-01-30 19:00:00+00:00,21.0,8,24.0,False,True
+failure_000436,server_0436,disk_failure,2025-01-26 14:00:00+00:00,True,2025-01-26 13:00:00+00:00,1.0,2,2.0,False,False
+failure_000441,server_0441,disk_failure,2025-01-28 22:00:00+00:00,True,2025-01-28 01:00:00+00:00,21.0,24,24.0,True,False
+failure_000455,server_0455,overheating,2025-01-31 10:00:00+00:00,True,2025-01-30 13:00:00+00:00,21.0,14,24.0,False,True
+failure_000473,server_0473,power_failure,2025-01-28 15:00:00+00:00,True,2025-01-27 20:00:00+00:00,19.0,24,24.0,True,False
+failure_000480,server_0480,overheating,2025-01-26 23:00:00+00:00,False,,,11,11.0,False,False
+failure_000487,server_0487,overheating,2025-01-30 06:00:00+00:00,True,2025-01-29 07:00:00+00:00,23.0,24,24.0,True,False
+failure_000496,server_0496,network_failure,2025-01-30 04:00:00+00:00,True,2025-01-29 06:00:00+00:00,22.0,24,24.0,True,False

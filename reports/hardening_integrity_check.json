@@ -1,0 +1,10 @@
+{
+  "prespecified_generator_and_model_sources_unchanged_after_results": true,
+  "sha256": {
+    "src/generate_data.py": "fe29c02ee03fb58ac9a67629e3ae1a4b8e9ed89c4904d9e55f7e0a6764b0b658",
+    "src/preprocess.py": "dc0e54f50eecf62c059e77b8d1be306e58ebbf4ac52d2d7cf89b6457021c8dac",
+    "src/config.py": "35efe0d8ad6a8fdb4059d3321f80c6d8668f27c1ac53e1761a4362ef60147e8a",
+    "src/train.py": "e68b7fc5699676d7d8c22c7eff6e04ef592d775d46a09031042bc31d05477b5d",
+    "src/evaluate.py": "2358660d724f4bdfaf435855dc7aefb86fe53a7b37601f97e87922b1353c16f3"
+  }
+}

@@ -1,0 +1,6 @@
+model,fit_seconds
+logistic_regression,0.7303297920007026
+random_forest,15.255618541999866
+hist_gradient_boosting,1.4754305419992306
+xgboost,1.3172463329992752
+lightgbm,2.132865749999837

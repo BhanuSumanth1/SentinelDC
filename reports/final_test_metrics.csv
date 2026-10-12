@@ -1,0 +1,2 @@
+model,split,score_type,pr_auc,roc_auc,precision,recall,f1,f2,brier_score,accuracy,threshold,true_positive,false_positive,true_negative,false_negative
+lightgbm,final_test,calibrated_failure_probability,0.10458219903027119,0.7429824755942547,0.031496594051392726,0.5572792362768496,0.059623364187679544,0.12844490896088895,0.015028992362728684,0.7272037037037037,0.037,467,14360,38802,371

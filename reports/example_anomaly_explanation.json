@@ -1,0 +1,37 @@
+{
+  "detector": "robust_statistical",
+  "overall_anomaly_score": 4.512603973424509,
+  "score_is_failure_probability": false,
+  "aggregation": "mean of top 5 absolute robust deviations clipped at 10.0",
+  "largest_deviations": [
+    {
+      "feature": "latency_rolling_mean_6h",
+      "clipped_robust_deviation": 7.331070678710938,
+      "contribution_to_overall_score": 1.4662141357421876
+    },
+    {
+      "feature": "network_latency_ms",
+      "clipped_robust_deviation": 6.862012487352266,
+      "contribution_to_overall_score": 1.3724024974704532
+    },
+    {
+      "feature": "packet_loss_rolling_mean_6h",
+      "clipped_robust_deviation": 3.543373492002487,
+      "contribution_to_overall_score": 0.7086746984004975
+    },
+    {
+      "feature": "packet_loss_pct",
+      "clipped_robust_deviation": 2.9744345791339875,
+      "contribution_to_overall_score": 0.5948869158267975
+    },
+    {
+      "feature": "cpu_memory_interaction",
+      "clipped_robust_deviation": 1.8521286299228668,
+      "contribution_to_overall_score": 0.37042572598457335
+    }
+  ],
+  "server_id": "server_0075",
+  "timestamp": "2025-01-27 12:00:00+00:00",
+  "selection_basis": "first alert of earliest detected event with available history; otherwise highest selected-detector score, earliest row tie",
+  "note": "This explains the robust statistical baseline only; it is not an Isolation Forest attribution or a hardware-failure diagnosis."
+}

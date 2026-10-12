@@ -1,0 +1,24 @@
+{
+  "incidents_identified": 180,
+  "high_confidence_incidents": 0,
+  "unknown_low_evidence_incidents": 158,
+  "most_common_signature": "UNKNOWN",
+  "signature_evaluation": {
+    "signature_classification_accuracy": 0.0,
+    "evaluated_unique_failure_events": 41,
+    "actual_test_failure_events": 43,
+    "events_without_eligible_alert": 2,
+    "coverage": 0.9534883720930233,
+    "evaluation_unit": "one event, assigned to incident of first same-server alert in [failure-24h, failure)",
+    "unknown_predictions_included_in_accuracy": true,
+    "component_accuracy": null,
+    "limitation": "Server failure type is not ground truth for an exact switch/rack/datacenter component. Signature agreement is evaluated only on alert-covered failure events; mixed incidents can contain several true types."
+  },
+  "example_incident_id": "INCIDENT_0078",
+  "protected_file_count": 189,
+  "frozen_supervised_artifacts_unchanged": true,
+  "frozen_anomaly_artifacts_unchanged": true,
+  "frozen_hybrid_artifacts_unchanged": true,
+  "dataset_hashes_unchanged": true,
+  "underlying_detector_training_or_inference": false
+}

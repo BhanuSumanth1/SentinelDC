@@ -1,0 +1,48 @@
+{
+  "selected_strategy": "WEIGHTED_HYBRID",
+  "policy": {
+    "supervised_threshold": 0.037,
+    "supervised_emergency": 0.5,
+    "anomaly_threshold": 2.2027039036822993,
+    "anomaly_extreme": 10.0,
+    "persistence_hours": 2,
+    "cooldown_hours": 6.0,
+    "severity_boundaries": {
+      "medium_supervised_fraction": 0.5,
+      "unusual_anomaly_percentile": 0.9,
+      "strong_anomaly_percentile": 0.95,
+      "extreme_anomaly_percentile": 0.995
+    },
+    "strategy": "WEIGHTED_HYBRID",
+    "candidate_id": "weighted_0.75_0.40",
+    "supervised_weight": 0.75,
+    "anomaly_weight": 0.25,
+    "hybrid_threshold": 0.4,
+    "supervised_normalization": "min(probability / (2 * supervised_threshold), 1)"
+  },
+  "selection_split": "VALIDATION",
+  "validation_metrics": {
+    "event_detection_rate": 0.8837209302325582,
+    "operational_precision": 0.03540437348143006,
+    "false_operational_alerts": 2779,
+    "false_alerts_per_server_day": 1.588,
+    "median_lead_time_hours": 20.0,
+    "detected_failure_events": 38,
+    "missed_failure_events": 5,
+    "utility": 0.5739822978132593
+  },
+  "selection_rule": "Maximum validation utility; exact ties: supervised-only first, fewer false alerts, higher median lead time, candidate_id. No row metric selects the policy.",
+  "utility_formula": "utility = event_detection_rate - 0.25 * false_alerts_per_server_day + 0.10 * operational_precision + 0.10 * detected_ge_6h_fraction_of_all_events. Undefined precision/early fraction contributes zero. Event detection already penalizes misses (1 - missed/events). No TEST-informed coefficient changes.",
+  "candidate_count": 15,
+  "strategy_family_count": 6,
+  "normalization": {
+    "fit_split": "VALIDATION",
+    "rows": 42000,
+    "start": "2025-01-22 00:00:00+00:00",
+    "end": "2025-01-25 11:00:00+00:00",
+    "method": "right empirical CDF; ties receive upper percentile; TEST cannot update reference"
+  },
+  "normalizer_sha256": "667548f3cacf6bf418aced1f7a6d3e304ed4c040847c41c189c2f4d36fcaf134",
+  "validation_caveat": "Frozen supervised calibration used an early subset of this validation cohort; these are development comparisons, not independent external estimates.",
+  "risk_rule": "MEDIUM: p>=0.5*t or q>=0.90; HIGH: p>=t or q>=0.995 or operational alert; CRITICAL: p>=t AND q>=0.95. Risk alone never bypasses selected policy persistence/cooldown."
+}

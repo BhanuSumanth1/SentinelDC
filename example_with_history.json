@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-01-01 15:00:00",
+  "server_id": "server_0000",
+  "cpu_utilization": 41.259,
+  "memory_utilization": 28.554,
+  "disk_utilization": 74.578,
+  "gpu_utilization": 42.444,
+  "temperature_c": 51.462,
+  "disk_read_mb_s": 94.616,
+  "disk_write_mb_s": 49.419,
+  "network_in_mb_s": 77.776,
+  "network_out_mb_s": 57.963,
+  "packet_loss_pct": 0.0,
+  "network_latency_ms": 7.06,
+  "smart_error_count": 0,
+  "fan_speed_rpm": 2804.799,
+  "power_watts": 319.192,
+  "uptime_days": 308.604
+}

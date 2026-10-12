@@ -1,0 +1,92 @@
+Matplotlib is building the font cache; this may take a moment.
+Explaining 7571 unique TEST observations in batches; 2000 global sample.
+/Users/harshal/Documents/Codex/2026-09-18/files-pasted-by-the-user-you/outputs/sentineldc/.venv/lib/python3.11/site-packages/shap/explainers/_tree.py:583: UserWarning: LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+  warnings.warn(
+                    feature  mean_abs_shap  importance_rank
+                uptime_days       2.097837                1
+           disk_utilization       0.228242                2
+                day_of_week       0.192923                3
+     memory_rolling_mean_6h       0.178191                4
+temperature_rolling_mean_6h       0.166919                5
+              fan_speed_rpm       0.135023                6
+    latency_rolling_mean_6h       0.114119                7
+packet_loss_rolling_mean_6h       0.098555                8
+       error_rate_indicator       0.096981                9
+         network_latency_ms       0.090395               10
+         memory_utilization       0.089679               11
+            gpu_utilization       0.084567               12
+                power_watts       0.075753               13
+      temperature_change_6h       0.063205               14
+        cpu_rolling_mean_6h       0.054057               15
+     cpu_memory_interaction       0.048189               16
+            disk_total_mb_s       0.047019               17
+            disk_write_mb_s       0.041245               18
+      temperature_deviation       0.033616               19
+         network_total_mb_s       0.031627               20
+SHAP computation complete. Loading existing event reports for reporting joins only.
+{
+  "shap_version": "0.48.0",
+  "underlying_model": "LGBMClassifier",
+  "explained_output": "positive-class raw log-odds; calibration is reported separately",
+  "feature_perturbation": "tree_path_dependent; frozen training path counts; no TEST background fitting",
+  "global_observations": 2000,
+  "global_positive_observations": 31,
+  "global_sample_method": "Proportional class-stratified TEST sample without replacement, seed 42; explanation only",
+  "unique_observations_explained": 7571,
+  "local_explanations": 200,
+  "failure_event_explanations": 41,
+  "live_view_rows": 500,
+  "protected_file_count": 214,
+  "frozen_supervised_artifacts_unchanged": true,
+  "frozen_anomaly_artifacts_unchanged": true,
+  "frozen_hybrid_artifacts_unchanged": true,
+  "frozen_root_cause_artifacts_unchanged": true,
+  "dataset_hashes_unchanged": true,
+  "training_or_tuning_performed": false,
+  "outcome_metadata_loaded_after_shap": true,
+  "requirements_change": "User-authorized addition shap>=0.46,<0.49. Legacy manifests are preserved; their requirements.txt hash predates this addition.",
+  "example_server": "server_0038",
+  "example_probability": 0.044193346790241894,
+  "example_hybrid_risk": "HIGH",
+  "top_10_global_features": [
+    "uptime_days",
+    "disk_utilization",
+    "day_of_week",
+    "memory_rolling_mean_6h",
+    "temperature_rolling_mean_6h",
+    "fan_speed_rpm",
+    "latency_rolling_mean_6h",
+    "packet_loss_rolling_mean_6h",
+    "error_rate_indicator",
+    "network_latency_ms"
+  ],
+  "example_top_drivers": [
+    {
+      "feature": "uptime_days",
+      "feature_name": "uptime_days",
+      "display_name": "Server uptime",
+      "value": 308.245,
+      "feature_value": 308.245,
+      "shap_value": 0.8740662407024162,
+      "direction": "INCREASES_RISK"
+    },
+    {
+      "feature": "disk_utilization",
+      "feature_name": "disk_utilization",
+      "display_name": "Disk utilization",
+      "value": 63.671,
+      "feature_value": 63.671,
+      "shap_value": 0.37130388235035716,
+      "direction": "INCREASES_RISK"
+    },
+    {
+      "feature": "memory_rolling_mean_6h",
+      "feature_name": "memory_rolling_mean_6h",
+      "display_name": "Average memory utilization (6h)",
+      "value": 60.800333333333334,
+      "feature_value": 60.800333333333334,
+      "shap_value": 0.16364942039297842,
+      "direction": "INCREASES_RISK"
+    }
+  ]
+}

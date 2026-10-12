@@ -1,0 +1,2 @@
+model,split,pr_auc,roc_auc,precision,recall,f1,accuracy,threshold,true_positive,false_positive,true_negative,false_negative
+random_forest,final_test,0.1377288516746923,0.736975506667197,0.023032417019627383,0.9928400954653938,0.045020426936500636,0.34635185185185186,0.1,832,35291,17871,6

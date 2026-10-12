@@ -1,0 +1,5 @@
+split,score_type,brier_score
+policy_validation,uncalibrated_model_score,0.0592326072058663
+policy_validation,calibrated_failure_probability,0.0174059672173804
+final_test,uncalibrated_model_score,0.058328997887872054
+final_test,calibrated_failure_probability,0.015028992362728684

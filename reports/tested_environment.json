@@ -1,0 +1,23 @@
+{
+  "python": "3.11.16",
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "pytest": "8.4.2"
+  },
+  "verification": {
+    "tests_passed": 55,
+    "full_pipeline": "passed",
+    "json_prediction": "passed",
+    "dependency_check": "passed",
+    "incident_evaluation": "passed",
+    "history_prediction": "passed",
+    "hardened_generator": "passed",
+    "single_feature_audit": "passed"
+  }
+}

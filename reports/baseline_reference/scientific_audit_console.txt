@@ -1,0 +1,99 @@
+
+TOP 10 SINGLE-FEATURE TEST AUCs (strength >= .90 is a realism flag, not leakage)
+               feature  roc_auc  predictive_strength  realism_review_flag  test_rows_used
+       packet_loss_pct 0.977003             0.977003                 True           54000
+  error_rate_indicator 0.974326             0.974326                 True           54000
+    network_latency_ms 0.973396             0.973396                 True           54000
+     smart_error_count 0.890306             0.890306                False           54000
+         temperature_c 0.793919             0.793919                False           54000
+ temperature_deviation 0.793919             0.793919                False           54000
+         fan_speed_rpm 0.783873             0.783873                False           54000
+           uptime_days 0.755090             0.755090                False           54000
+      disk_utilization 0.720262             0.720262                False           54000
+cpu_memory_interaction 0.686403             0.686403                False           54000
+
+TEST EVENT LABEL-WINDOW DISTRIBUTION (hours: count)
+label_window_lead_hours
+6.0      1
+7.0      1
+14.0     1
+21.0     1
+23.0     1
+24.0    58
+
+TEST EVENT MODEL WARNING DISTRIBUTION (hours: count)
+model_lead_hours
+6.0      1
+7.0      1
+14.0     1
+18.0     1
+19.0     2
+20.0     1
+21.0     5
+22.0     3
+23.0    10
+24.0    38
+
+AUDIT DIAGNOSTICS
+{
+  "checks_passed": 32,
+  "checks_failed": [],
+  "strongest_feature": "packet_loss_pct",
+  "strongest_auc": 0.9770031444643305,
+  "single_feature_flags": [
+    "packet_loss_pct",
+    "error_rate_indicator",
+    "network_latency_ms"
+  ],
+  "test_incidents": 63,
+  "global_incidents": 300,
+  "global_windows_start_at_24h": 300,
+  "test_windows_start_at_24h": 58,
+  "alert_on_first_test_label": 43,
+  "alerts_at_exactly_24h": 38,
+  "median_label_window_lead_hours": 24.0,
+  "median_model_lead_hours": 24.0,
+  "prewindow_test_rows": 1192,
+  "prewindow_test_alerts": 198,
+  "shared_train_test_servers": 500,
+  "train_servers": 500,
+  "test_servers": 500,
+  "structure": {
+    "exact_duplicate_rows": 0,
+    "duplicate_server_timestamp_keys": 0,
+    "duplicate_numeric_telemetry_vectors": 0,
+    "full_24h_events_compared": 288,
+    "partial_events_excluded": 12,
+    "event_pairs_compared": 41328,
+    "identical_event_pairs": 0,
+    "near_duplicate_pairs": 0,
+    "maximum_shape_correlation": 0.976539948652847,
+    "minimum_standardized_shape_rmse": 0.9930335257463228,
+    "repeated_exact_server_feature_traces": 0
+  },
+  "event_summary": {
+    "total_failure_events": 63,
+    "detected_failure_events": 63,
+    "missed_failure_events": 0,
+    "event_detection_rate": 1.0,
+    "mean_lead_time_hours": 22.476190476190474,
+    "median_lead_time_hours": 24.0,
+    "min_lead_time_hours": 6.0,
+    "max_lead_time_hours": 24.0,
+    "p25_lead_time_hours": 23.0,
+    "p75_lead_time_hours": 24.0,
+    "complete_warning_window_events": 46,
+    "partial_warning_window_events": 17,
+    "events_after_test_end": 13,
+    "early_detection_denominator": "all_failure_events_in_test_warning_rows",
+    "lead_time_statistics_population": "detected_events_only",
+    "detected_ge_24h_count": 38,
+    "detected_ge_24h_pct": 60.317460317460316,
+    "detected_ge_12h_count": 61,
+    "detected_ge_12h_pct": 96.82539682539682,
+    "detected_ge_6h_count": 63,
+    "detected_ge_6h_pct": 100.0,
+    "detected_ge_3h_count": 63,
+    "detected_ge_3h_pct": 100.0
+  }
+}

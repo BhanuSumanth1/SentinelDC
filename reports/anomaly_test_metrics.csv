@@ -1,0 +1,2 @@
+detector,split,pr_auc,roc_auc,precision,recall,f1,f2,true_positive,false_positive,true_negative,false_negative,false_alerts_per_1000_healthy_observations,threshold
+robust_statistical,final_test,0.0241959318627812,0.628498605020418,0.019694327623345984,0.6873508353221957,0.038291507395712146,0.08834626829043836,576,28671,24491,262,539.313795568263,2.2027039036822993

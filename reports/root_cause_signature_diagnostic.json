@@ -1,0 +1,33 @@
+{
+  "evaluation_mapping_bug_found": false,
+  "evaluation_replay_matches_saved_events": true,
+  "mapping": {
+    "network_failure": "NETWORK_LIKE",
+    "overheating": "THERMAL_LIKE",
+    "power_failure": "POWER_LIKE",
+    "disk_failure": "DISK_LIKE",
+    "memory_failure": "MEMORY_COMPUTE_LIKE"
+  },
+  "evaluated_events": 41,
+  "correct_signatures": 0,
+  "incorrect_non_unknown": 5,
+  "unknown": 36,
+  "signature_accuracy_including_unknown": 0.0,
+  "conditional_accuracy_excluding_unknown": 0.0,
+  "conditional_accuracy_denominator": 5,
+  "true_failure_type_counts": {
+    "disk_failure": 16,
+    "overheating": 9,
+    "power_failure": 7,
+    "memory_failure": 5,
+    "network_failure": 4
+  },
+  "inferred_signature_counts": {
+    "UNKNOWN": 36,
+    "NETWORK_LIKE": 5
+  },
+  "interpretation": "Signature agreement on alert-covered events; UNKNOWN counts as incorrect. Conditional accuracy is supplementary, not the main metric. No component causal accuracy is available.",
+  "inference_outputs_changed": false,
+  "frozen_artifacts_unchanged": true,
+  "dataset_hashes_unchanged": true
+}

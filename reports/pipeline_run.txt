@@ -1,0 +1,102 @@
+[1/6] Generating telemetry data...
+Generator: heterogeneous-v2 | Seed: 42
+Rows: 360,000 | Servers: 500
+Positive telemetry rows: 7,076 (1.97%)
+Actual failure incidents: 300
+Date range: 2025-01-01 00:00:00 to 2025-01-30 23:00:00
+Saved: sentineldc/data/raw/server_telemetry.csv
+
+[2/6] Validating data...
+Validation report
+  rows: 360000
+  unique_servers: 500
+  duplicate_rows: 0
+  missing_values: 0
+  expected_null_event_metadata: 705848
+  failure_events: 300
+  positive_rate: 0.019655555555555555
+Validation passed.
+
+[3/6] Preprocessing...
+Saved 360,000 processed rows: sentineldc/data/processed/server_telemetry_processed.csv
+Residual missing values use medians fitted on training data only.
+
+[4/6] Training models...
+Training: 2025-01-01T00:00:00+00:00 to 2025-01-20T23:00:00+00:00 | 240,000 rows | Positive failures: 2.10%
+Validation: 2025-01-22T00:00:00+00:00 to 2025-01-25T11:00:00+00:00 | 42,000 rows | Positive failures: 1.93%
+Test: 2025-01-26T12:00:00+00:00 to 2025-01-30T23:00:00+00:00 | 54,000 rows | Positive failures: 1.55%
+Purged rows across both boundaries: 24,000
+Training logistic_regression...
+Training random_forest...
+Training hist_gradient_boosting...
+
+[5/6] Selecting model and threshold using validation data...
+
+VALIDATION comparison (AP = PR-AUC; comparison threshold 0.50)
+                 model  pr_auc  recall  precision     f1  roc_auc
+         random_forest  0.0804  0.0901     0.1839 0.1210   0.7333
+   logistic_regression  0.0543  0.4531     0.0343 0.0638   0.6697
+hist_gradient_boosting  0.0525  0.2136     0.0535 0.0856   0.6990
+Selected: random_forest | Validation-selected threshold: 0.10
+
+[6/6] Running final evaluation on untouched test data...
+
+ROW-LEVEL METRICS — FINAL TEST
+        model      split  pr_auc  roc_auc  precision  recall     f1  accuracy  threshold  true_positive  false_positive  true_negative  false_negative
+random_forest final_test  0.1377   0.7370     0.0230  0.9928 0.0450    0.3464     0.1000            832           35291          17871               6
+
+Operational Summary (telemetry observations, not distinct incidents)
+Actual failures: 838
+Detected failures: 832
+Missed failures: 6
+False alerts: 35,291
+Failure detection rate: 99.28%
+False alerts per 1,000 observations: 653.54
+False alerts per 1,000 healthy observations: 663.84
+
+SentinelDC evaluation pipeline completed successfully.
+Best model: random_forest
+Selected threshold: 0.10
+
+FINAL UNTOUCHED TEST RESULTS — ROW-LEVEL METRICS
+PR-AUC: 0.1377
+Recall: 0.9928
+Precision: 0.0230
+F1: 0.0450
+
+OPERATIONAL RESULTS (telemetry observations)
+Failures detected: 832
+Failures missed: 6
+False alerts: 35,291
+
+FAILURE EVENT ANALYSIS
+Actual failure events: 43
+Detected failure events: 43
+Missed failure events: 0
+Event detection rate: 100.00%
+
+FAILURE WARNING LEAD TIME (detected events)
+Median lead time: 24.00 hours
+Mean lead time: 22.35 hours
+25th percentile: 24.00 hours
+75th percentile: 24.00 hours
+Detected at least 12 hours early: 40 (93.02% of all test events)
+Detected at least 6 hours early: 41 (95.35% of all test events)
+
+TOP 10 SINGLE-FEATURE TEST AUCs (strength >= .90 is a realism flag, not leakage)
+               feature  roc_auc  predictive_strength  realism_review_flag  test_rows_used
+           uptime_days 0.792474             0.792474                False           54000
+     smart_error_count 0.635429             0.635429                False           54000
+  error_rate_indicator 0.608595             0.608595                False           54000
+smart_error_change_12h 0.603197             0.603197                False           54000
+   cpu_rolling_mean_6h 0.579019             0.579019                False           54000
+         fan_speed_rpm 0.574325             0.574325                False           54000
+       cpu_utilization 0.573824             0.573824                False           54000
+    network_total_mb_s 0.570755             0.570755                False           54000
+       network_in_mb_s 0.569577             0.569577                False           54000
+      disk_utilization 0.567450             0.567450                False           54000
+
+Strongest individual feature: uptime_days
+Single-feature ROC-AUC: 0.792474 | Predictive strength: 0.792474
+Realism warning (strength >= 0.90): none
+Realism report: sentineldc/reports/hardened_dataset_realism.md
